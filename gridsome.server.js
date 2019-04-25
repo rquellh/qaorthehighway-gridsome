@@ -11,8 +11,7 @@ module.exports = function (api) {
   for (const event of events) {
     api.loadSource(store => {
       const contentType = store.addContentType({
-        typeName: 'Session',
-        route: `/${event.year}/:slug`
+        typeName: 'Session'
       })
 
       for (const session of event.sessions) {
@@ -24,7 +23,6 @@ module.exports = function (api) {
           title: session.title,
           path,
           fields: {
-            year: event.year,
             speaker: session.speaker,
             bio: session.bio,
             title: session.title,
