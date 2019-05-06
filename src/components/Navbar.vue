@@ -8,13 +8,13 @@
       </v-toolbar-items>
       <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"/>
     </v-toolbar>
-    <v-navigation-drawer class="gradient" right disable-resize-watcher app v-model="drawer">
+    <v-navigation-drawer right disable-resize-watcher app v-model="drawer">
       <v-list>
         <v-list-tile v-for="link in links" :key="link.title" :href="link.path">
           <v-list-tile-action>
-            <v-icon class="white--text">{{link.icon}}</v-icon>
+            <v-icon>{{link.icon}}</v-icon>
           </v-list-tile-action>
-          <v-list-tile-content class="white--text">{{link.title}}</v-list-tile-content>
+          <v-list-tile-content>{{link.title}}</v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>

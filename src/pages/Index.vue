@@ -1,18 +1,27 @@
 <template>
   <v-app>
-    <Navbar />
-    <v-content class="gradient">
-      <v-layout>
-        <v-container fluid >
-          <v-img :src="require('./assets/images/qaorthehighwaylogo.png')"></v-img>
-        </v-container>
-      </v-layout>
+    <Navbar/>
+    <v-content>
+      <v-container fluid primary darken-3 ma-0 pa-0>
+        <v-layout class="max-width" pa-0 align-center justify-space-around>
+          <v-flex sm12 md8>
+            <v-img
+              class="gradient"
+              width="500"
+              :src="require('./assets/images/qaorthehighwaylogo_reverse.png')"
+            ></v-img>
+          </v-flex>
+          <v-flex md4 class="hidden-sm-and-below" >
+            <v-img min-height="700" :src="require('./assets/images/hero_image.png')"></v-img>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
+import Navbar from "@/components/Navbar";
 
 export default {
   components: {
@@ -29,7 +38,7 @@ export default {
   margin-right: 1rem;
   text-decoration: none;
   color: black;
-  background: transparent
+  background: transparent;
 }
 
 .transparent {
@@ -37,14 +46,15 @@ export default {
 }
 
 .gradient {
-  background: rgb(255,255,255);
+  background: var(--v-secondary-base);
   background: linear-gradient(
-    171deg,
-    rgba(5, 85, 163, 0.5) 0%,
-    rgba(124, 166, 206, 0.3) 30%,
-    rgba(255, 255, 255, 1.0) 50%,
-    rgba(235, 31, 39, 0.3) 70%,
-    rgba(236, 31, 39, 0.5) 100%
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    var(--v-secondary-base) 35%
   );
+}
+
+.layout.max-width {
+  max-width: 100%;
 }
 </style>
