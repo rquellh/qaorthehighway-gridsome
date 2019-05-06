@@ -6,8 +6,21 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const events = require('./static/data/data.json')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = function (api) {
+  //Whitelist Vuetify
+  api.chainWebpack((config, { isServer }) => {
+    if (isServer) {
+      config.externals([
+        nodeExternals({
+          whitelist: [/^vuetify/]
+        })
+      ])
+    }
+  })
+
+  //Load the conference data
   for (const event of events) {
     api.loadSource(store => {
       const contentType = store.addContentType({

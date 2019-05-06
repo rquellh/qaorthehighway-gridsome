@@ -1,33 +1,50 @@
 <template>
-  <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
-   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
-  </Layout>
+  <v-app>
+    <Navbar />
+    <v-content class="gradient">
+      <v-layout>
+        <v-container fluid >
+          <v-img :src="require('./assets/images/qaorthehighwaylogo.png')"></v-img>
+        </v-container>
+      </v-layout>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
+
 export default {
+  components: {
+    Navbar
+  },
   metaInfo: {
-    title: 'Hello, world!'
+    title: ""
   }
-}
+};
 </script>
 
-<style>
-.home-links a {
+<style scoped>
+.navigation a {
   margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+  background: transparent
+}
+
+.transparent {
+  background: transparent;
+}
+
+.gradient {
+  background: rgb(255,255,255);
+  background: linear-gradient(
+    171deg,
+    rgba(5, 85, 163, 0.5) 0%,
+    rgba(124, 166, 206, 0.3) 30%,
+    rgba(255, 255, 255, 1.0) 50%,
+    rgba(235, 31, 39, 0.3) 70%,
+    rgba(236, 31, 39, 0.5) 100%
+  );
 }
 </style>
