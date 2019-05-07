@@ -1,15 +1,16 @@
 <template>
   <nav>
-    <v-toolbar flat app>
-      <v-toolbar-title>QA or the Highway</v-toolbar-title>
-      <v-spacer/>
-      <v-toolbar-items class="hidden-sm-and-down" v-for="link in links" :key="link.title">
+    <v-toolbar dark flat app color="dark-background">
+      <v-toolbar-items class="hidden-sm-and-down center" v-for="link in links" :key="link.title">
         <v-btn flat :href="link.path">{{link.title}}</v-btn>
       </v-toolbar-items>
+      <v-btn outline dark href="./outline">Tickets</v-btn>
+      <v-spacer class="hidden-md-and-up"/>
       <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"/>
     </v-toolbar>
-    <v-navigation-drawer right disable-resize-watcher app v-model="drawer">
-      <v-list>
+
+    <v-navigation-drawer class="dark-background" right disable-resize-watcher app v-model="drawer">
+      <v-list dark>
         <v-list-tile v-for="link in links" :key="link.title" :href="link.path">
           <v-list-tile-action>
             <v-icon>{{link.icon}}</v-icon>
@@ -42,13 +43,13 @@ export default {
 </script>
 
 <style scoped>
-.gradient {
-  background: var(--v-primary-base);
-  background: linear-gradient(
-    0deg,
-    var(--v-secondary-base) 0%,
-    var(--v-primary-base) 100%
-  );
+.center {
+  margin: 0 auto;
+  display: block;
+}
+
+.dark-background {
+  background: rgba(21, 29, 43, 1);
 }
 </style>
 
