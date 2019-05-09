@@ -8,7 +8,7 @@ import 'vuetify/dist/vuetify.min.css'
 export default function (Vue, { router, head, isClient }) {
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+    href: 'https://use.fontawesome.com/releases/v5.8.2/css/all.css'
   })
 
   //Setup Vuetify
@@ -20,7 +20,8 @@ export default function (Vue, { router, head, isClient }) {
     },
     options: {
       customProperties: true
-    }
+    },
+    iconfont: 'fa4'
   })
   
   // Set default layout as a global component

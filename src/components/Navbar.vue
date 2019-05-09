@@ -5,6 +5,9 @@
         <v-btn flat :href="link.path">{{link.title}}</v-btn>
       </v-toolbar-items>
       <v-btn outline dark href="./outline">Tickets</v-btn>
+      <div class="hidden-md-and-up">
+        
+      </div>
       <v-spacer class="hidden-md-and-up"/>
       <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"/>
     </v-toolbar>
@@ -28,14 +31,14 @@ export default {
     return {
       drawer: false,
       links: [
-        { icon: "home", title: "Home", path: "/" },
-        { icon: "record_voice_over", title: "Speakers", path: "/speakers" },
-        { icon: "list_alt", title: "Program", path: "/program" },
-        { icon: "location_city", title: "Venue", path: "/venue" },
-        { icon: "question_answer", title: "FAQ", path: "/faq" },
-        { icon: "group", title: "Committee", path: "/committee" },
-        { icon: "contact_mail", title: "Contact", path: "/contact" },
-        { icon: "history", title: "Archive", path: "/archive" }
+        { icon: "fa-home", title: "Home", path: "/" },
+        { icon: "fa-chalkboard-teacher", title: "Speakers", path: "/speakers" },
+        { icon: "fa-list-alt", title: "Program", path: "/program" },
+        { icon: "fa-map-pin", title: "Venue", path: "/venue" },
+        { icon: "fa-question-circle", title: "FAQ", path: "/faq" },
+        { icon: "fa-users", title: "Committee", path: "/committee" },
+        { icon: "fa-at", title: "Contact", path: "/contact" },
+        { icon: "fa-history", title: "Archive", path: "/archive" }
       ]
     };
   }

@@ -2,38 +2,72 @@
   <v-app>
     <Navbar/>
     <v-content>
-      <v-container fluid class="gradient" ma-0 pa-0>
-        <v-layout class="max-width" row pa-0 align-center fill-height>
-          <v-flex sm12 md8 ma-4>
-            <v-img
-              class="center"
-              max-width="900"
-              min-width="450"
-              :src="require('./assets/images/qaorthehighwaylogo.png')"
-            >
-              <div class="fill-height image-gradient"/>
-            </v-img>
-            <h2
-              class="text-xs-center secondary--text display-2 font-weight-bold pt-5"
-            >February 19, 2019</h2>
-          </v-flex>
-          <v-flex md4 class="hidden-sm-and-down">
-            <v-img min-height="700" :src="require('./assets/images/hero_image.png')">
-              <div class="fill-height image-gradient-dark"/>
-            </v-img>
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <Hero/>
+      <div class="mission">
+        <v-container py-5 fluid>
+          <v-layout class="max-width">
+            <h1
+              :class="['text-xs-center', {'display-1 pa-5 font-weight-bold' : $vuetify.breakpoint.mdAndUp}]"
+            >QA or the Highway is a one day, affordable, regional, professional, conference featuring real-world experience and thought leadership in the QA and testing industry.</h1>
+          </v-layout>
+        </v-container>
+      </div>
+      <div class="image-break">
+        <v-container fluid ma-0 pa-0>
+          <v-layout class="max-width" ma-0 pa-0>
+            <v-flex xs12 md6>
+              <v-img
+                :aspect-ratio="16/6"
+                :src="require('@/assets/images/transition/transition-1.png')"
+              ></v-img>
+            </v-flex>
+            <v-flex md6 class="hidden-sm-and-down">
+              <v-img
+                :aspect-ratio="16/6"
+                :src="require('@/assets/images/transition/transition-2.png')"
+              ></v-img>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </div>
+      <div class="sponsors">
+        <v-container>
+          <v-layout row v-for="platinum in platinums" :key="platinum.index">
+            <v-flex xs6>
+              <v-img
+                :aspect-ratio="16/6"
+                :src="require(platinum.img)"
+              ></v-img>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Hero
+  },
+  data() {
+    return {
+      platinums: [
+        {
+          img: "@/assets/images/sponsors/platinum/apifortress.png",
+          link: "https://apifortress.com/"
+        },
+        {
+          img: "@/assets/images/sponsors/platinum/everest-logo.png",
+          link: "http://www.everesttech.com/"
+        }
+      ]
+    };
   },
   metaInfo: {
     title: ""
@@ -42,44 +76,16 @@ export default {
 </script>
 
 <style scoped>
-.navigation a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: black;
-  background: transparent;
-}
-
-.container.gradient {
-  background: rgb(112, 113, 113);
+.mission {
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-    56deg,
-    rgb(51, 75, 110) 0%,
-    rgba(21, 29, 43, 1) 50%
-  );
-}
-
-.image-gradient {
-  background-image: linear-gradient(
-    171deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(223, 46, 48, 0) 70%
-  );
-}
-
-.image-gradient-dark {
-  background-image: linear-gradient(
-    90deg,
-    rgba(21, 29, 43, 1) 0%,
-    rgba(112, 113, 113, 0) 30%
+    165deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(223, 46, 48, 0.8) 80%
   );
 }
 
 .layout.max-width {
   max-width: 100%;
-}
-
-.center {
-  margin: auto;
-  width: 50%;
 }
 </style>
