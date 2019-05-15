@@ -31,12 +31,11 @@
         </v-container>
       </div>
       <div class="sponsors">
-        <v-container>
-          <v-layout row v-for="platinum in platinums" :key="platinum.index">
-            <v-flex xs6>
+        <v-container fluid ma-0 pa-0>
+          <v-layout class="max-width" ma-0 pa-0>
+            <v-flex xs6 v-for="platinum in platinums" :key="platinum.index">
               <v-img
-                :aspect-ratio="16/6"
-                :src="require(platinum.img)"
+                :src= platinum.img
               ></v-img>
             </v-flex>
           </v-layout>
@@ -59,11 +58,11 @@ export default {
     return {
       platinums: [
         {
-          img: "@/assets/images/sponsors/platinum/apifortress.png",
+          img: require('@/assets/images/sponsors/platinum/apifortress.png'),
           link: "https://apifortress.com/"
         },
         {
-          img: "@/assets/images/sponsors/platinum/everest-logo.png",
+          img: require('@/assets/images/sponsors/platinum/everest-logo.png'),
           link: "http://www.everesttech.com/"
         }
       ]
@@ -85,7 +84,7 @@ export default {
   );
 }
 
-.layout.max-width {
+.max-width {
   max-width: 100%;
 }
 </style>
