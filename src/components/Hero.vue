@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="gradient" ma-0 pa-0>
+  <v-container fluid class="gradient2" ma-0 pa-0>
     <v-layout class="max-width" row pa-0 align-center fill-height>
       <v-flex sm12 md8 ma-4>
         <v-img
@@ -8,7 +8,7 @@
           min-width="450"
           :src="require('@/assets/images/qaorthehighwaylogo.png')"
         >
-          <div class="fill-height image-gradient"/>
+          <div class="fill-height"/>
         </v-img>
         <h2 class="text-xs-center secondary--text display-2 font-weight-bold pt-5">February 19, 2019</h2>
         <div class="text-xs-center pt-5 outline">
@@ -18,8 +18,8 @@
         </div>
       </v-flex>
       <v-flex md4 class="hidden-sm-and-down">
-        <v-img :aspect-ratio="9/14" :src="require('@/assets/images/hero_image.png')">
-          <div class="fill-height image-gradient-dark"/>
+        <v-img :aspect-ratio="9/14" :src="require('@/assets/images/hero_image3.png')">
+          <div class="fill-height"/>
         </v-img>
       </v-flex>
     </v-layout>
@@ -32,6 +32,37 @@
   text-decoration: none;
   color: black;
   background: transparent;
+}
+
+.container.gradient2 {
+  background: linear-gradient(330deg, #000428, #004e92, #6F9CEB);
+background-size: 600% 600%;
+
+-webkit-animation: gradient-animator 30s ease infinite;
+-moz-animation: gradient-animator 30s ease infinite;
+-o-animation: gradient-animator 30s ease infinite;
+animation: gradient-animator 30s ease infinite;
+}
+
+@-webkit-keyframes gradient-animator {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@-moz-keyframes gradient-animator {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@-o-keyframes gradient-animator {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@keyframes gradient-animator { 
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
 }
 
 .container.gradient {
