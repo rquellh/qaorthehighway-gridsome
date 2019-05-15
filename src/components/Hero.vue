@@ -10,7 +10,7 @@
         >
           <div class="fill-height"/>
         </v-img>
-        <h2 class="text-xs-center secondary--text display-2 font-weight-bold pt-5">February 19, 2019</h2>
+        <h2 class="text-xs-center white--text display-2 font-weight-bold pt-5">February 19, 2019</h2>
         <div class="text-xs-center pt-5 outline">
           <v-btn outline dark class="pa-4 headline font-weight-bold" href="/outline">
           <v-icon class="pr-4">fa-ticket-alt</v-icon>
