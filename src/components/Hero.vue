@@ -36,7 +36,7 @@
 
 .container.gradient2 {
   background: linear-gradient(330deg, #000428, #004e92, #6F9CEB);
-background-size: 600% 600%;
+background-size: 250% 250%;
 
 -webkit-animation: gradient-animator 30s ease infinite;
 -moz-animation: gradient-animator 30s ease infinite;

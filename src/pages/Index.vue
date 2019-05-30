@@ -3,7 +3,7 @@
     <Navbar/>
     <v-content>
       <Hero/>
-      <div class="mission">
+      <div class="mission grey lighten-3">
         <v-container py-5 fluid>
           <v-layout class="max-width">
             <h1
@@ -33,10 +33,8 @@
       <div class="sponsors">
         <v-container fluid ma-0 pa-0>
           <v-layout class="max-width" ma-0 pa-0>
-            <v-flex xs6 v-for="platinum in platinums" :key="platinum.index">
-              <v-img
-                :src= platinum.img
-              ></v-img>
+            <v-flex xs6 ma-3 pa-3 align-self-center v-for="platinum in platinums" :key="platinum.index">
+              <v-img class="center" :src="platinum.img" max-height="500" max-width="500"></v-img>
             </v-flex>
           </v-layout>
         </v-container>
@@ -58,11 +56,11 @@ export default {
     return {
       platinums: [
         {
-          img: require('@/assets/images/sponsors/platinum/apifortress.png'),
+          img: require("@/assets/images/sponsors/platinum/apifortress.png"),
           link: "https://apifortress.com/"
         },
         {
-          img: require('@/assets/images/sponsors/platinum/everest-logo.png'),
+          img: require("@/assets/images/sponsors/platinum/everest-logo.png"),
           link: "http://www.everesttech.com/"
         }
       ]
@@ -75,16 +73,10 @@ export default {
 </script>
 
 <style scoped>
-.mission {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(223, 46, 48, 0.8) 80%
-  );
-}
-
 .max-width {
   max-width: 100%;
+}
+.center {
+  margin: auto;
 }
 </style>
