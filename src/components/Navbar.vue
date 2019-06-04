@@ -46,6 +46,13 @@ export default {
 </script>
 
 <style scoped>
+.navigation a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+}
+
 .center {
   margin: 0 auto;
   display: block;
