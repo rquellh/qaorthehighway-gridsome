@@ -5,11 +5,11 @@
       <Hero/>
       <div class="mission grey lighten-3">
         <v-container py-5 fluid>
-          <v-layout class="max-width" row align-center>
+          <v-layout class="max-width" row wrap align-center>
             <v-flex xs12 md4 v-for="mission in missions" :key="mission.index">
               <v-img 
               :src="mission.img"
-              :aspect-ratio="20/6"
+              :aspect-ratio="10/3"
               contain> 
               </v-img>
               <h1>{{mission.title}}</h1>
@@ -41,9 +41,9 @@
       </div>
       <div class="sponsors">
         <v-container fluid ma-0 pa-0>
-          <v-layout class="max-width" ma-0 pa-0>
+          <v-layout class="max-width" ma-0 pa-0 row>
             <v-flex
-              md6
+              xs6
               ma-3
               pa-3
               align-self-center
@@ -102,6 +102,7 @@ export default {
   metaInfo: {
     title: ""
   }
+  
 };
 </script>
 
