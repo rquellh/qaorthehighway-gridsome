@@ -39,7 +39,8 @@ module.exports = function (api) {
             speaker: session.speaker,
             bio: session.bio,
             title: session.title,
-            abstract: session.abstract
+            abstract: session.abstract,
+            year: event.year,
           }
         })
       }
