@@ -1,11 +1,23 @@
 <template>
-  <v-app>
-    <ul>
-      <li v-for="session in $page.sessions.edges" :key="session.node.speaker">
-        {{session.node.speaker}}
-      </li>
-    </ul>
-  </v-app>
+  <Layout>
+    <v-app>
+      <v-expansion-panel>
+        <v-expansion-panel-content
+          v-for="session in $page.sessions.edges"
+          :key="session.node.speaker"
+        >
+          <template v-slot:header>
+            <div>{{session.node.title}}</div>
+          </template>
+          <v-card>
+            <v-card-text>
+              {{session.node.abstract}}
+            </v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-app>
+  </Layout>
 </template>
 
 <page-query>
@@ -14,6 +26,8 @@ query currentSessions{
     edges {
       node {
         speaker
+        title
+        abstract
       }
     }
   }
@@ -21,9 +35,14 @@ query currentSessions{
 </page-query>
 
 <script>
+import Layout from "@/layouts/Default";
+
 export default {
+  components: {
+    Layout
+  },
   metaInfo: {
-    title: 'Program'
+    title: "Program"
   }
-}
+};
 </script>
