@@ -7,12 +7,16 @@
           :key="session.node.speaker"
         >
           <template v-slot:header>
-            <div>{{session.node.title}}</div>
+            <v-container ma-0 pa-2>
+              <v-layout row ma-0>
+                <v-flex xs6>{{session.node.title}}</v-flex>
+                <v-flex xs3>{{session.node.speaker}}</v-flex>
+                <v-flex xs3 text-xs-right pr-3>{{session.node.room}}</v-flex>
+              </v-layout>
+            </v-container>
           </template>
           <v-card>
-            <v-card-text>
-              {{session.node.abstract}}
-            </v-card-text>
+            <v-card-text>{{session.node.abstract}}</v-card-text>
           </v-card>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -28,6 +32,8 @@ query currentSessions{
         speaker
         title
         abstract
+        time
+        room
       }
     }
   }
@@ -46,3 +52,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.max-width {
+  max-width: 100%;
+}
+</style>

@@ -41,6 +41,8 @@ module.exports = function (api) {
             title: session.title,
             abstract: session.abstract,
             year: event.year,
+            time: session.time,
+            room: session.room,
           }
         })
       }
