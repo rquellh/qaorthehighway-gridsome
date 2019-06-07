@@ -6,14 +6,14 @@
       <div class="mission grey lighten-3">
         <v-container py-5 fluid>
           <v-layout class="max-width" row wrap align-center>
-            <v-flex xs12 md4 v-for="mission in missions" :key="mission.index">
+            <v-flex xs12 md4 class="text-xs-center" v-for="mission in missions" :key="mission.index">
               <v-img 
               :src="mission.img"
               :aspect-ratio="10/3"
               contain> 
               </v-img>
-              <h1>{{mission.title}}</h1>
-              <p>{{mission.description}}</p>
+              <h1 class="pt-5">{{mission.title}}</h1>
+              <p class="px-5 pb-3">{{mission.description}}</p>
             </v-flex>
           </v-layout>
           
