@@ -2,29 +2,13 @@
   <v-app>
     <Layout>
       <v-content>
-        <h1 class="pl-4">{{$page.sessions.edges[0].node.time}}</h1> 
-        <v-expansion-panel popout>
-          <v-expansion-panel-content
-            v-for="session in $page.sessions.edges"
-            :key="session.node.speaker"
-            class="left-bar-double-red"
-          >
-            <template v-slot:header>
-              <v-container  ma-0 pa-1>
-                <v-layout row ma-0 align-center>
-                  <v-flex xs6>{{session.node.title}}</v-flex>
-                  <v-flex xs3>{{session.node.speaker}}</v-flex>
-                  <v-flex xs3 text-xs-right pr-3>
-                    <v-chip>{{session.node.room}}</v-chip>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </template>
-            <v-card>
-              <v-card-text>{{session.node.abstract}}</v-card-text>
-            </v-card>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
+        <Session :sessions="$page.session1"/>
+        <Session :sessions="$page.session2"/>
+        <Session :sessions="$page.session3"/>
+        <Session :sessions="$page.session4"/>
+        <Session :sessions="$page.session5"/>
+        <Session :sessions="$page.session6"/>
+        <Session :sessions="$page.session7"/>
       </v-content>
     </Layout>
   </v-app>
@@ -32,8 +16,86 @@
 
 <page-query>
 query currentSessions {
-  sessions: allSession(
+  session1: allSession(
+    filter: { year: { dteq: "2019" }, time: { eq: "8:00 - 9:00" } }
+  ) {
+    edges {
+      node {
+        speaker
+        title
+        abstract
+        time
+        room
+      }
+    }
+  },
+  session2: allSession(
+    filter: { year: { dteq: "2019" }, time: { eq: "9:15 - 10:15" } }
+  ) {
+    edges {
+      node {
+        speaker
+        title
+        abstract
+        time
+        room
+      }
+    }
+  },
+  session3: allSession(
+    filter: { year: { dteq: "2019" }, time: { eq: "10:30 - 11:30" } }
+  ) {
+    edges {
+      node {
+        speaker
+        title
+        abstract
+        time
+        room
+      }
+    }
+  },
+  session4: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "12:45 - 1:45" } }
+  ) {
+    edges {
+      node {
+        speaker
+        title
+        abstract
+        time
+        room
+      }
+    }
+  },
+  session5: allSession(
+    filter: { year: { dteq: "2019" }, time: { eq: "1:55 - 2:55" } }
+  ) {
+    edges {
+      node {
+        speaker
+        title
+        abstract
+        time
+        room
+      }
+    }
+  },
+  session6: allSession(
+    filter: { year: { dteq: "2019" }, time: { eq: "3:05 - 4:05" } }
+  ) {
+    edges {
+      node {
+        speaker
+        title
+        abstract
+        time
+        room
+      }
+    }
+  }
+  session7: allSession(
+    filter: { year: { dteq: "2019" }, time: { eq: "4:15 - 5:15" } }
   ) {
     edges {
       node {
@@ -50,10 +112,12 @@ query currentSessions {
 
 <script>
 import Layout from "@/layouts/Default";
+import Session from "@/components/SessionList";
 
 export default {
   components: {
-    Layout
+    Layout,
+    Session
   },
   metaInfo: {
     title: "Program"
@@ -66,7 +130,7 @@ export default {
   max-width: 100%;
 }
 
-.left-bar-red{
+.left-bar-red {
   border-left: 4px solid red;
 }
 .left-bar-double-red {
