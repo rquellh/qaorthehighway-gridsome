@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Layout>
-      <v-content>
+      <v-content class="mt-5">
         <Session :sessions="$page.session1"/>
         <Session :sessions="$page.session2"/>
         <Session :sessions="$page.session3"/>
@@ -18,6 +18,8 @@
 query currentSessions {
   session1: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "8:00 - 9:00" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -31,6 +33,8 @@ query currentSessions {
   },
   session2: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "9:15 - 10:15" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -44,6 +48,8 @@ query currentSessions {
   },
   session3: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "10:30 - 11:30" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -57,6 +63,8 @@ query currentSessions {
   },
   session4: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "12:45 - 1:45" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -70,6 +78,8 @@ query currentSessions {
   },
   session5: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "1:55 - 2:55" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -83,6 +93,8 @@ query currentSessions {
   },
   session6: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "3:05 - 4:05" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -96,6 +108,8 @@ query currentSessions {
   }
   session7: allSession(
     filter: { year: { dteq: "2019" }, time: { eq: "4:15 - 5:15" } }
+    sortBy: "room"
+    order: ASC
   ) {
     edges {
       node {
@@ -124,31 +138,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.max-width {
-  max-width: 100%;
-}
-
-.left-bar-red {
-  border-left: 4px solid red;
-}
-.left-bar-double-red {
-  border-left: 4px double red;
-}
-</style>
-
-
-// query currentSessions{
-//   sessions: allSession(filter: {year: {dteq: "2019"}}) {
-//     edges {
-//       node {
-//         speaker
-//         title
-//         abstract
-//         time
-//         room
-//       }
-//     }
-//   }
-// }

@@ -3,23 +3,23 @@
     <h1 class="pl-4">{{sessions.edges[0].node.time}}</h1>
     <v-expansion-panel popout>
       <v-expansion-panel-content
-        v-for="session in sessions.edges"
+        v-for="(session, index) in sessions.edges"
         :key="session.node.speaker"
-        :class="timeStripped"
+        :class="timeFiltered"
       >
         <template v-slot:header>
           <v-container ma-0 pa-1>
-            <v-layout row ma-0 align-center>
-              <v-flex xs8>{{session.node.title}}</v-flex>
-              <v-flex xs2 class="grey--text">{{session.node.speaker}}</v-flex>
-              <v-flex xs2 text-xs-right pr-3>
-                <v-chip>{{session.node.room}}</v-chip>
+            <v-layout row ma-0 align-center wrap>
+              <v-flex xs12 md8>{{session.node.title}}</v-flex>
+              <v-flex xs6 md2 class="grey--text text--darken-1">{{session.node.speaker}}</v-flex>
+              <v-flex xs6 md2 text-xs-right pr-3>
+                <v-chip :class="roomFiltered([index])">{{session.node.room}}</v-chip>
               </v-flex>
             </v-layout>
           </v-container>
         </template>
         <v-card>
-          <v-card-text>{{session.node.abstract}}</v-card-text>
+          <v-card-text class="grey lighten-4">{{session.node.abstract}}</v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -31,8 +31,13 @@ export default {
   props: ["sessions"],
   data: function() {
     return {
-      timeStripped: `t${this.sessions.edges[0].node.time.replace(/:|-| /g, "")}`
+      timeFiltered: `t${this.sessions.edges[0].node.time.replace(/:|-| /g, "")}`
     };
+  },
+  methods: {
+    roomFiltered: function(index) {
+      return this.sessions.edges[index].node.room.replace(/:|-| |&/g, "").toLowerCase();
+    }
   }
 };
 </script>
@@ -48,7 +53,7 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #9C27B0;
+  background-color: #9c27b0;
 }
 .t9151015 {
   position: relative;
@@ -61,7 +66,7 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 .t10301130 {
   position: relative;
@@ -73,7 +78,7 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #03A9F4;
+  background-color: #03a9f4;
 }
 .t1245145 {
   position: relative;
@@ -85,7 +90,7 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #3F51B5;
+  background-color: #3f51b5;
 }
 .t155255 {
   position: relative;
@@ -97,7 +102,7 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #F44336;
+  background-color: #f44336;
 }
 .t305405 {
   position: relative;
@@ -109,7 +114,7 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #FFC107;
+  background-color: #ffc107;
 }
 .t415515 {
   position: relative;
@@ -121,7 +126,28 @@ export default {
   position: absolute;
   left: 0;
   top: 5%;
-  background-color: #E91E63;
+  background-color: #e91e63;
+}
+.cartoonroom {
+  background: #90CAF9
+}
+.greathall12 {
+  background: #B39DDB
+}
+.greathall3 {
+  background: #A5D6A7
+}
+.interfaithroom {
+  background: #FFF59D
+}
+.studentalumniroom {
+  background: #EF9A9A
+}
+.westballroom {
+  background: #FFCC80
+}
+.eastballroom {
+  background: #80CBC4
 }
 </style>
 
