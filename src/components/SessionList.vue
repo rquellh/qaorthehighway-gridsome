@@ -19,7 +19,12 @@
           </v-container>
         </template>
         <v-card>
-          <v-card-text class="grey lighten-4">{{session.node.abstract}}</v-card-text>
+          <v-card-text class="grey lighten-4">
+            <div>{{session.node.abstract}}</div>
+            <div class="ma-5">
+              <v-btn class="right" :href="`./${session.node.year}/${removeSpaces(session.node.speaker)}`" outline small color="primary">More Information</v-btn>
+            </div>
+          </v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -36,7 +41,12 @@ export default {
   },
   methods: {
     roomFiltered: function(index) {
-      return this.sessions.edges[index].node.room.replace(/:|-| |&/g, "").toLowerCase();
+      return this.sessions.edges[index].node.room
+        .replace(/:|-| |&/g, "")
+        .toLowerCase();
+    },
+    removeSpaces: function(text) {
+      return text.replace(/ /, "")
     }
   }
 };
@@ -129,25 +139,30 @@ export default {
   background-color: #e91e63;
 }
 .cartoonroom {
-  background: #90CAF9
+  background: #90caf9;
 }
 .greathall12 {
-  background: #B39DDB
+  background: #b39ddb;
 }
 .greathall3 {
-  background: #A5D6A7
+  background: #a5d6a7;
 }
 .interfaithroom {
-  background: #FFF59D
+  background: #fff59d;
 }
 .studentalumniroom {
-  background: #EF9A9A
+  background: #ef9a9a;
 }
 .westballroom {
-  background: #FFCC80
+  background: #ffcc80;
 }
 .eastballroom {
-  background: #80CBC4
+  background: #80cbc4;
+}
+.right {
+  right: 5%;
+  bottom: 1rem;
+  position: absolute;
 }
 </style>
 

@@ -28,6 +28,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   },
@@ -43,6 +44,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   },
@@ -58,6 +60,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   },
@@ -73,6 +76,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   },
@@ -88,6 +92,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   },
@@ -103,6 +108,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   }
@@ -118,6 +124,7 @@ query currentSessions {
         abstract
         time
         room
+        year
       }
     }
   }
