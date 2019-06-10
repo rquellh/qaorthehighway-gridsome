@@ -1,0 +1,17 @@
+<template>
+  <div>
+    <v-container pa-1>
+      <v-layout ma-0 pa-0 row>
+        <v-flex xs1>
+        </v-flex>
+        <v-flex xs12 align-content-center>
+          <v-card height="100%" color="secondary lighten-1" dark>
+            <v-card-title primary-title class="justify-center">
+              <div>15 Minute Break</div>
+            </v-card-title>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </div>
+</template>

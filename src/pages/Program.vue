@@ -21,9 +21,13 @@
         </div>
         <div v-else>
           <SessionGrid :sessions="$page.session2"/>
+          <SessionBreak/>
           <SessionGrid :sessions="$page.session3"/>
+          <SessionBreak/>
           <SessionGrid :sessions="$page.session4"/>
+          <SessionBreak/>
           <SessionGrid :sessions="$page.session5"/>
+          <SessionBreak/>
           <SessionGrid :sessions="$page.session6"/>
         </div>
       </v-content>
@@ -151,13 +155,15 @@ query currentSessions {
 <script>
 import Layout from "@/layouts/Default";
 import SessionList from "@/components/SessionList";
-import SessionGrid from "@/components/SessionGrid"
+import SessionGrid from "@/components/SessionGrid";
+import SessionBreak from "@/components/SessionBreak"
 
 export default {
   components: {
     Layout,
     SessionList,
-    SessionGrid
+    SessionGrid,
+    SessionBreak
   },
   data: function() {
     return {
