@@ -11,16 +11,16 @@
           </v-btn>
         </div>
         <div v-if="showList">
-          <Session :sessions="$page.session1"/>
-          <Session :sessions="$page.session2"/>
-          <Session :sessions="$page.session3"/>
-          <Session :sessions="$page.session4"/>
-          <Session :sessions="$page.session5"/>
-          <Session :sessions="$page.session6"/>
-          <Session :sessions="$page.session7"/>
+          <SessionList :sessions="$page.session1"/>
+          <SessionList :sessions="$page.session2"/>
+          <SessionList :sessions="$page.session3"/>
+          <SessionList :sessions="$page.session4"/>
+          <SessionList :sessions="$page.session5"/>
+          <SessionList :sessions="$page.session6"/>
+          <SessionList :sessions="$page.session7"/>
         </div>
         <div v-else>
-          <h1>This is the table view</h1>
+          <SessionGrid :sessions="$page.session2"/>
         </div>
       </v-content>
     </Layout>
@@ -146,12 +146,14 @@ query currentSessions {
 
 <script>
 import Layout from "@/layouts/Default";
-import Session from "@/components/SessionList";
+import SessionList from "@/components/SessionList";
+import SessionGrid from "@/components/SessionGrid"
 
 export default {
   components: {
     Layout,
-    Session
+    SessionList,
+    SessionGrid
   },
   data: function() {
     return {
@@ -165,4 +167,9 @@ export default {
 </script>
 
 <style scoped>
+.left {
+  left: 7%;
+  bottom: 1rem;
+  position: absolute;
+}
 </style>

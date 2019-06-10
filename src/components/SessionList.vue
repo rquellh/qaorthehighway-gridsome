@@ -4,7 +4,7 @@
     <v-expansion-panel popout>
       <v-expansion-panel-content
         v-for="(session, index) in sessions.edges"
-        :key="session.node.speaker"
+        :key="index"
         :class="timeFiltered"
       >
         <template v-slot:header>
