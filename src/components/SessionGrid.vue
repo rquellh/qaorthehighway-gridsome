@@ -1,10 +1,9 @@
 <template>
   <div>
-    <v-container>
-      <v-layout ma-0 row>
-        <v-flex align-self-center>
-          <h2 class="mr-4 mb-3">9:15</h2>
-          <h2>11:15</h2>
+    <v-container pa-1>
+      <v-layout ma-0 pa-0 row>
+        <v-flex align-self-center xs1>
+          <div v-html="timeRedesign(sessions.edges[0].node.time)" />
         </v-flex>
         <v-flex v-for="(session, index) in sessions.edges" :key="index" shrink xs2>
           <v-card height="100%">
@@ -23,10 +22,14 @@
 
 <script>
 export default {
-    props: ["sessions"],
-    methods: {
+  props: ["sessions"],
+  methods: {
+    timeRedesign: function(unfilteredTime) {
+        var timeArray = unfilteredTime.split(" ")
+        return `<h2 class="mb-3">${timeArray[0]}</h2><h2>${timeArray[2]}</h2>`
     }
-}
+  }
+};
 </script>
 
 <style scoped>

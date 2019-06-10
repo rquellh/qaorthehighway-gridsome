@@ -21,6 +21,10 @@
         </div>
         <div v-else>
           <SessionGrid :sessions="$page.session2"/>
+          <SessionGrid :sessions="$page.session3"/>
+          <SessionGrid :sessions="$page.session4"/>
+          <SessionGrid :sessions="$page.session5"/>
+          <SessionGrid :sessions="$page.session6"/>
         </div>
       </v-content>
     </Layout>
@@ -167,9 +171,4 @@ export default {
 </script>
 
 <style scoped>
-.left {
-  left: 7%;
-  bottom: 1rem;
-  position: absolute;
-}
 </style>
