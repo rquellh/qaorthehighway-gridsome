@@ -2,13 +2,26 @@
   <v-app>
     <Layout>
       <v-content class="mt-5">
-        <Session :sessions="$page.session1"/>
-        <Session :sessions="$page.session2"/>
-        <Session :sessions="$page.session3"/>
-        <Session :sessions="$page.session4"/>
-        <Session :sessions="$page.session5"/>
-        <Session :sessions="$page.session6"/>
-        <Session :sessions="$page.session7"/>
+        <div class="mb-5">
+          <v-btn @click="showList = true" small outline color="primary" class="right">
+            <v-icon class="pr-2 caption">fa-list</v-icon>List
+          </v-btn>
+          <v-btn @click="showList = false" small outline color="primary" class="right">
+            <v-icon class="pr-2 caption">fa-th</v-icon>Grid
+          </v-btn>
+        </div>
+        <div v-if="showList">
+          <Session :sessions="$page.session1"/>
+          <Session :sessions="$page.session2"/>
+          <Session :sessions="$page.session3"/>
+          <Session :sessions="$page.session4"/>
+          <Session :sessions="$page.session5"/>
+          <Session :sessions="$page.session6"/>
+          <Session :sessions="$page.session7"/>
+        </div>
+        <div v-else>
+          <h1>This is the table view</h1>
+        </div>
       </v-content>
     </Layout>
   </v-app>
@@ -140,8 +153,16 @@ export default {
     Layout,
     Session
   },
+  data: function() {
+    return {
+      showList: true
+    };
+  },
   metaInfo: {
     title: "Program"
   }
 };
 </script>
+
+<style scoped>
+</style>
