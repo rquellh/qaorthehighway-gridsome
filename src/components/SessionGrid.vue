@@ -1,11 +1,21 @@
 <template>
   <div>
-    <v-container pa-1>
+    <v-container fluid pa-1 ma-0>
       <v-layout ma-0 pa-0 row>
         <v-flex align-self-center xs1>
-          <div v-html="timeRedesign(sessions.edges[0].node.time)" />
+          <div v-html="timeRedesign(sessions.edges[0].node.time)"/>
         </v-flex>
-        <v-flex v-for="(session, index) in sessions.edges" :key="index" shrink xs2>
+        <v-flex class="flex-spacing">
+          <v-card height="100%">
+          </v-card>
+        </v-flex>
+        <v-flex
+          class="flex-spacing"
+          v-for="(session, index) in sessions.edges"
+          :key="index"
+          shrink
+          xs1
+        >
           <v-card height="100%">
             <v-card-title primary-title>
               <div>
@@ -25,8 +35,8 @@ export default {
   props: ["sessions"],
   methods: {
     timeRedesign: function(unfilteredTime) {
-        var timeArray = unfilteredTime.split(" ")
-        return `<h2 class="mb-3">${timeArray[0]}</h2><h2>${timeArray[2]}</h2>`
+      var timeArray = unfilteredTime.split(" ");
+      return `<h2 class="mb-5">${timeArray[0]}</h2><h2>${timeArray[2]}</h2>`;
     }
   }
 };
@@ -37,6 +47,11 @@ export default {
   left: 7%;
   bottom: 1rem;
   position: absolute;
+}
+.flex-spacing {
+  width: 20%;
+  max-width: 20%;
+  flex-basis: 20%;
 }
 </style>
 
