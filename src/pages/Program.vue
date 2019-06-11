@@ -21,15 +21,18 @@
         </div>
         <div v-else>
           <SessionLunch startTime="7:00" endTime="7:50" title="Breakfast"/>
+          <SessionLunch startTime="7:50" endTime="8:00" title="Opening Remarks"/>
+          <SessionKeynote :sessions="$page.session1"/>
           <SessionGrid :sessions="$page.session2"/>
           <SessionBreak/>
           <SessionGrid :sessions="$page.session3"/>
-          <SessionBreak/>
+          <SessionLunch startTime="11:30" endTime="12:45" title="Lunch"/>
           <SessionGrid :sessions="$page.session4"/>
           <SessionBreak/>
           <SessionGrid :sessions="$page.session5"/>
           <SessionBreak/>
           <SessionGrid :sessions="$page.session6"/>
+          <SessionKeynote :sessions="$page.session7"/>
         </div>
       </v-content>
     </Layout>
@@ -158,7 +161,8 @@ import Layout from "@/layouts/Default";
 import SessionList from "@/components/SessionList";
 import SessionGrid from "@/components/SessionGrid";
 import SessionBreak from "@/components/SessionBreak";
-import SessionLunch from "@/components/SessionLunch"
+import SessionLunch from "@/components/SessionLunch";
+import SessionKeynote from "@/components/SessionKeynote"
 
 export default {
   components: {
@@ -166,7 +170,8 @@ export default {
     SessionList,
     SessionGrid,
     SessionBreak,
-    SessionLunch
+    SessionLunch,
+    SessionKeynote
   },
   data: function() {
     return {
