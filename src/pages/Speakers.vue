@@ -57,13 +57,15 @@ query currentSessions {
   speakers2: allSession(
     filter: { year: { dteq: "2019" } speaker2: {regex: "([A-Z])"}}
     perPage: 50
-    sortBy: "speaker"
+    sortBy: "speaker2"
     order: ASC
   ) {
     edges {
       node {
         speaker
+        speaker2
         bio
+        bio2
         year
       }
     }
