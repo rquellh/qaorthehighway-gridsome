@@ -37,7 +37,9 @@ module.exports = function (api) {
           path,
           fields: {
             speaker: session.speaker,
+            speaker2: session.speaker2,
             bio: session.bio,
+            bio2: session.bio2,
             title: session.title,
             abstract: session.abstract,
             year: event.year,
