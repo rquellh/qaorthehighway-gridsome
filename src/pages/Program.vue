@@ -20,6 +20,7 @@
           <SessionList :sessions="$page.session7"/>
         </div>
         <div v-else>
+          <SessionGridHeader :rooms="rooms" />
           <SessionCustom startTime="7:00" endTime="7:50" title="Breakfast"/>
           <SessionCustom startTime="7:50" endTime="8:00" title="Opening Remarks"/>
           <SessionKeynote :sessions="$page.session1"/>
@@ -166,6 +167,7 @@ import SessionGrid from "@/components/SessionGrid";
 import SessionBreak from "@/components/SessionBreak";
 import SessionCustom from "@/components/SessionCustom";
 import SessionKeynote from "@/components/SessionKeynote";
+import SessionGridHeader from "@/components/SessionGridHeader";
 
 export default {
   components: {
@@ -174,11 +176,21 @@ export default {
     SessionGrid,
     SessionBreak,
     SessionCustom,
-    SessionKeynote
+    SessionKeynote,
+    SessionGridHeader
   },
   data: function() {
     return {
-      showList: true
+      showList: true,
+      rooms: [
+        { room: "East Ballroom", floor: "Second Floor" },
+        { room: "Cartoon Room", floor: "Third Floor" },
+        { room: "Great Hall 1 & 2", floor: "First Floor" },
+        { room: "Great Hall 3", floor: "First Floor" },
+        { room: "Interfaith Room", floor: "Third Floor" },
+        { room: "Strudent-Alumni Room", floor: "Second Floor" },
+        { room: "West Ballroom", floor: "Second Floor" }
+      ]
     };
   },
   metaInfo: {
