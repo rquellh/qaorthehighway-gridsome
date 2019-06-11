@@ -20,6 +20,7 @@
           <SessionList :sessions="$page.session7"/>
         </div>
         <div v-else>
+          <SessionLunch startTime="7:00" endTime="7:50" title="Breakfast"/>
           <SessionGrid :sessions="$page.session2"/>
           <SessionBreak/>
           <SessionGrid :sessions="$page.session3"/>
@@ -156,14 +157,16 @@ query currentSessions {
 import Layout from "@/layouts/Default";
 import SessionList from "@/components/SessionList";
 import SessionGrid from "@/components/SessionGrid";
-import SessionBreak from "@/components/SessionBreak"
+import SessionBreak from "@/components/SessionBreak";
+import SessionLunch from "@/components/SessionLunch"
 
 export default {
   components: {
     Layout,
     SessionList,
     SessionGrid,
-    SessionBreak
+    SessionBreak,
+    SessionLunch
   },
   data: function() {
     return {
