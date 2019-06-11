@@ -5,7 +5,7 @@
         <v-flex xs12 align-content-center pl-5 ml-5>
           <v-card height="100%" color="secondary lighten-1" dark>
             <v-card-title primary-title class="justify-center">
-              <div>15 Minute Break</div>
+              <div>{{time}} Minute Break</div>
             </v-card-title>
           </v-card>
         </v-flex>
@@ -13,6 +13,13 @@
     </v-container>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["time"]
+}
+</script>
+
 
 <style scoped>
 .flex-spacing {

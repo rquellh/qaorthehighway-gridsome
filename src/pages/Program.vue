@@ -20,19 +20,22 @@
           <SessionList :sessions="$page.session7"/>
         </div>
         <div v-else>
-          <SessionLunch startTime="7:00" endTime="7:50" title="Breakfast"/>
-          <SessionLunch startTime="7:50" endTime="8:00" title="Opening Remarks"/>
+          <SessionCustom startTime="7:00" endTime="7:50" title="Breakfast"/>
+          <SessionCustom startTime="7:50" endTime="8:00" title="Opening Remarks"/>
           <SessionKeynote :sessions="$page.session1"/>
+          <SessionBreak time="15"/>
           <SessionGrid :sessions="$page.session2"/>
-          <SessionBreak/>
+          <SessionBreak time="15"/>
           <SessionGrid :sessions="$page.session3"/>
-          <SessionLunch startTime="11:30" endTime="12:45" title="Lunch"/>
+          <SessionCustom startTime="11:30" endTime="12:45" title="Lunch"/>
           <SessionGrid :sessions="$page.session4"/>
-          <SessionBreak/>
+          <SessionBreak time="10"/>
           <SessionGrid :sessions="$page.session5"/>
-          <SessionBreak/>
+          <SessionBreak time="10"/>
           <SessionGrid :sessions="$page.session6"/>
+          <SessionBreak time="10"/>
           <SessionKeynote :sessions="$page.session7"/>
+          <SessionCustom startTime="5:15" endTime="5:30" title="Raffle and Closing Remarks"/>
         </div>
       </v-content>
     </Layout>
@@ -161,8 +164,8 @@ import Layout from "@/layouts/Default";
 import SessionList from "@/components/SessionList";
 import SessionGrid from "@/components/SessionGrid";
 import SessionBreak from "@/components/SessionBreak";
-import SessionLunch from "@/components/SessionLunch";
-import SessionKeynote from "@/components/SessionKeynote"
+import SessionCustom from "@/components/SessionCustom";
+import SessionKeynote from "@/components/SessionKeynote";
 
 export default {
   components: {
@@ -170,7 +173,7 @@ export default {
     SessionList,
     SessionGrid,
     SessionBreak,
-    SessionLunch,
+    SessionCustom,
     SessionKeynote
   },
   data: function() {

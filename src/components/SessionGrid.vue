@@ -36,7 +36,7 @@ export default {
   methods: {
     timeRedesign: function(unfilteredTime) {
       var timeArray = unfilteredTime.split(" ");
-      return `<h2 class="mb-5">${timeArray[0]}</h2><h2>${timeArray[2]}</h2>`;
+      return `<h2 class="mb-3">${timeArray[0]}</h2><h2>${timeArray[2]}</h2>`;
     }
   }
 };
