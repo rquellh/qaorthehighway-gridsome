@@ -2,6 +2,8 @@
   <v-app>
     <Layout>
       <v-content class="mt-5">
+        <h1 class="primary--text">2019 Program</h1>
+        <v-divider class="pb-2"/>
         <div class="mb-5">
           <v-btn @click="showList = true" small outline color="primary" class="right">
             <v-icon class="pr-2 caption">fa-list</v-icon>List
@@ -20,7 +22,7 @@
           <SessionList :sessions="$page.session7"/>
         </div>
         <div v-else>
-          <SessionGridHeader :rooms="rooms" />
+          <SessionGridHeader :rooms="rooms"/>
           <SessionCustom startTime="7:00" endTime="7:50" title="Breakfast"/>
           <SessionCustom startTime="7:50" endTime="8:00" title="Opening Remarks"/>
           <SessionKeynote :sessions="$page.session1"/>

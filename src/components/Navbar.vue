@@ -3,7 +3,7 @@
     <v-toolbar flat app dark>
       <v-toolbar-items class="hidden-sm-and-down center" v-for="link in links" :key="link.title">
         <v-btn flat :href="link.path">{{link.title}}</v-btn>
-      </v-toolbar-items>
+      </v-toolbar-items>      
       <v-btn outline href="./outline">Tickets</v-btn>
       <v-spacer class="hidden-md-and-up"/>
       <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"/>
