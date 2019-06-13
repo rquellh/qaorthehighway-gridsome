@@ -15,7 +15,7 @@
               :key="speaker.node.speaker"
             >
               <v-card>
-                <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.5"></v-img>
+                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
                 <v-card-title primary-title>
                   <h2>{{speaker.node.speaker}}</h2>
                   <v-spacer></v-spacer>
@@ -57,7 +57,7 @@
               :key="speaker.node.speaker"
             >
               <v-card>
-                <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.5"></v-img>
+                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
                 <v-card-title primary-title>
                   <h2>{{speaker.node.speaker}}</h2>
                   <v-spacer></v-spacer>
@@ -93,7 +93,7 @@
               :key="index"
             >
               <v-card>
-                <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="1.5"></v-img>
+                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
                 <v-card-title primary-title>
                   <h2>{{speaker.node.speaker2}}</h2>
                   <v-spacer></v-spacer>
@@ -208,9 +208,9 @@ export default {
 
 <style>
 .keynote {
-  border-bottom: 5px solid var(--v-primary-base);
+  border-bottom: 1px solid var(--v-primary-base);
 }
 .sessions {
-  border-bottom: 5px solid var(--v-secondary-base);
+  border-bottom: 1px solid var(--v-secondary-base);
 }
 </style>
