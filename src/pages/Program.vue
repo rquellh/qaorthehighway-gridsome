@@ -2,7 +2,7 @@
   <v-app>
     <Layout>
       <v-content class="mt-5">
-        <h1 class="primary--text">2019 Program</h1>
+        <h1 class="grey--text">2019 Program</h1>
         <v-divider class="pb-2"/>
         <div class="mb-5">
           <v-btn @click="showList = true" small outline color="primary" class="right">

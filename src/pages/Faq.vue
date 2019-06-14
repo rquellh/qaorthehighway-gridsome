@@ -2,7 +2,7 @@
   <v-app>
     <Layout>
       <v-content class="mt-5">
-        <h1 class="primary--text">FAQs</h1>
+        <h1 class="grey--text">FAQs</h1>
         <v-divider/>
         <h3
           class="my-3"

@@ -3,7 +3,7 @@
     <Navbar/>
     <v-content>
       <Hero/>
-      <div class="mission grey lighten-3">
+      <div class="mission">
         <v-container py-5 fluid>
           <v-layout class="max-width" row wrap align-center>
             <v-flex xs12 md4 class="text-xs-center" v-for="mission in missions" :key="mission.index">
