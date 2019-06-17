@@ -17,9 +17,15 @@
                 <h2 class="primary--text underline-primary">
                   {{ $page.session.speaker }}
                   <span class="pl-5">
-                    <v-icon class="primary--text px-3">fab fa-linkedin</v-icon>
-                    <v-icon class="primary--text px-3">fab fa-twitter</v-icon>
-                    <v-icon class="primary--text px-3">fas fa-globe</v-icon>
+                    <v-btn flat icon color="primary" class="px-3">
+                      <v-icon class="primary--text px-3">fab fa-linkedin</v-icon>
+                    </v-btn>
+                    <v-btn flat icon color="primary" class="px-3">
+                      <v-icon class="primary--text px-3">fab fa-twitter</v-icon>
+                    </v-btn>
+                    <v-btn flat icon color="primary" class="px-3">
+                      <v-icon class="primary--text px-3">fas fa-globe</v-icon>
+                    </v-btn>
                   </span>
                 </h2>
               </div>
