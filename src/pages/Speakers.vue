@@ -15,7 +15,7 @@
               :key="speaker.node.speaker"
             >
               <v-card>
-                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
+                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5" contain></v-img>
                 <v-card-title primary-title>
                   <h2>{{speaker.node.speaker}}</h2>
                   <v-spacer></v-spacer>
