@@ -5,10 +5,24 @@
         <v-container ma-0 pa-0 fluid>
           <v-layout ma-0 pa-0 row wrap>
             <v-flex xs12 md4 pa-3>
-              <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1" max-width="450" center></v-img>
+              <v-img
+                :src="require('@/assets/images/generic-profile.png')"
+                aspect-ratio="1"
+                max-width="450"
+                center
+              ></v-img>
             </v-flex>
             <v-flex xs12 md8 pa-3>
-              <h2 class="underline-primary primary--text">{{ $page.session.speaker }}</h2>
+              <div>
+                <h2 class="primary--text underline-primary">
+                  {{ $page.session.speaker }}
+                  <span class="pl-5">
+                    <v-icon class="primary--text px-3">fab fa-linkedin</v-icon>
+                    <v-icon class="primary--text px-3">fab fa-twitter</v-icon>
+                    <v-icon class="primary--text px-3">fas fa-globe</v-icon>
+                  </span>
+                </h2>
+              </div>
               <br>
               <p>{{ $page.session.bio }}</p>
             </v-flex>
