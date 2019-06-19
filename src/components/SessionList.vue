@@ -8,7 +8,7 @@
         :class="timeFiltered"
       >
         <div slot="header">
-          <v-container ma-0 pa-1>
+          <v-container ma-0 pa-1 fluid>
             <v-layout row ma-0 align-center wrap>
               <v-flex xs12 md8>{{session.node.title}}</v-flex>
               <v-flex xs6 md2 class="grey--text text--darken-1">{{session.node.speaker}}</v-flex>
@@ -20,7 +20,8 @@
         </div>
         <v-card>
           <v-card-text class="grey lighten-4">
-            <div>{{session.node.abstract}}</div>
+            <p>{{session.node.abstract}}</p>
+            <v-spacer />
             <div class="ma-5">
               <v-btn class="right" :href="`./${session.node.year}/${removeSpaces(session.node.speaker)}`" outline small color="primary">More Information</v-btn>
             </div>
