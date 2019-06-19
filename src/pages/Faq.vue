@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Layout>
-      <v-content class="mt-5">
+      <v-content class="my-5">
         <h1 class="grey--text">FAQs</h1>
         <v-divider/>
         <h3

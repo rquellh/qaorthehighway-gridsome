@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Layout>
-      <v-content class="mt-5">
+      <v-content class="my-5">
         <h1 class="grey--text">2019 Speakers</h1>
         <v-divider class="pb-5"/>
         <h1 class="text-xs-center primary--text keynote">Keynote Speakers</h1>

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Layout>
-      <v-content class="mt-5">
+      <v-content class="my-5">
         <v-container ma-0 pa-0 fluid>
           <v-layout ma-0 pa-0 row wrap>
             <v-flex xs12 md4 pa-3>
