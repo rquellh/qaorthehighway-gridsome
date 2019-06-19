@@ -3,6 +3,7 @@
     <HomePageLayout>
       <v-content>
         <Hero/>
+        <ImageBreak />
         <div class="mission">
           <v-container py-5 fluid>
             <v-layout row wrap align-center>
@@ -22,24 +23,7 @@
             <!-- :class="['text-xs-center', {'display-1 pa-5 font-weight-bold' : $vuetify.breakpoint.mdAndUp}]" -->
           </v-container>
         </div>
-        <div class="image-break">
-          <v-container fluid ma-0 pa-0>
-            <v-layout ma-0 pa-0>
-              <v-flex xs12 md6>
-                <v-img
-                  :aspect-ratio="16/6"
-                  :src="require('@/assets/images/transition/transition-1.png')"
-                ></v-img>
-              </v-flex>
-              <v-flex md6 class="hidden-sm-and-down">
-                <v-img
-                  :aspect-ratio="16/6"
-                  :src="require('@/assets/images/transition/transition-2.png')"
-                ></v-img>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </div>
+        <ImageBreak />
         <div class="sponsors">
           <v-container fluid>
             <h1 class="my-5 text-xs-center primary--text underline-primary">Platinum Sponsors</h1>
@@ -88,11 +72,13 @@
 <script>
 import Hero from "@/components/Hero";
 import HomePageLayout from "@/layouts/HomePageLayout";
+import ImageBreak from "@/components/ImageBreak"
 
 export default {
   components: {
     HomePageLayout,
-    Hero
+    Hero,
+    ImageBreak
   },
   data() {
     return {
