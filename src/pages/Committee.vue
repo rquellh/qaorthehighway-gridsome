@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Layout>
-      <v-content class="mt-5">
+      <v-content class="my-5">
         <h1 class="grey--text">COSQAM Committee</h1>
         <v-divider class="pb-1"/>
         <h3 class="pb-5">​The QA or the Highway conference is organized by COSQAM (Central Ohio Software Quality Assurance & Management), which is backed by QA leaders from several Central Ohio organizations, including Centric Consulting, CoverMyMeds, Grange Insurance, HMB, Ineffable Solutions, and Tricentis.<br><br> In addition to organizing and running the QA or the Highway conference, COSQAM also offers quarterly Lunch & Learn presentations on QA and Testing topics.<br><br> At COSQAM, we are dedicated to elevating the QA and Testing industry – for us, it is QA or the Highway!</h3>

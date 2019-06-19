@@ -1,7 +1,8 @@
 <template>
   <div class="layout">
-    <Navbar/>
-    <slot/>
+    <Navbar />
+    <slot />
+    <Footer />
   </div>
 </template>
 
@@ -15,10 +16,12 @@ query {
 
 <script>
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 };
 </script>
