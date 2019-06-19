@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <HomePageLayout>
+    <Layout class="max-width">
       <v-content>
         <Hero/>
-        <ImageBreak />
+        <ImageBreak/>
         <div class="mission">
           <v-container py-5 fluid>
             <v-layout row wrap align-center>
@@ -23,7 +23,7 @@
             <!-- :class="['text-xs-center', {'display-1 pa-5 font-weight-bold' : $vuetify.breakpoint.mdAndUp}]" -->
           </v-container>
         </div>
-        <ImageBreak />
+        <ImageBreak/>
         <div class="sponsors">
           <v-container fluid>
             <h1 class="my-5 text-xs-center primary--text underline-primary">Platinum Sponsors</h1>
@@ -52,7 +52,9 @@
                 ></v-img>
               </v-flex>
             </v-layout>
-            <h1 class="my-5 text-xs-center secondary--text underline-secondary">Lunch & Snack Sponsors</h1>
+            <h1
+              class="my-5 text-xs-center secondary--text underline-secondary"
+            >Lunch & Snack Sponsors</h1>
             <v-layout align-center row fill-height wrap>
               <v-flex xs6 pa-5 align-self-center v-for="silver in 2" :key="silver.index">
                 <v-img
@@ -65,18 +67,18 @@
           </v-container>
         </div>
       </v-content>
-    </HomePageLayout>
+    </Layout>
   </v-app>
 </template>
 
 <script>
 import Hero from "@/components/Hero";
-import HomePageLayout from "@/layouts/HomePageLayout";
-import ImageBreak from "@/components/ImageBreak"
+import Layout from "@/layouts/Default";
+import ImageBreak from "@/components/ImageBreak";
 
 export default {
   components: {
-    HomePageLayout,
+    Layout,
     Hero,
     ImageBreak
   },
@@ -121,6 +123,12 @@ export default {
 </script>
 
 <style scoped>
+.max-width {
+  max-width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
 .underline-primary {
   border-bottom: 1px solid var(--v-primary-base);
 }

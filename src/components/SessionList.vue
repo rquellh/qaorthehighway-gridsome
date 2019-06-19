@@ -7,7 +7,7 @@
         :key="index"
         :class="timeFiltered"
       >
-        <template v-slot:header>
+        <div slot="header">
           <v-container ma-0 pa-1>
             <v-layout row ma-0 align-center wrap>
               <v-flex xs12 md8>{{session.node.title}}</v-flex>
@@ -17,7 +17,7 @@
               </v-flex>
             </v-layout>
           </v-container>
-        </template>
+        </div>
         <v-card>
           <v-card-text class="grey lighten-4">
             <div>{{session.node.abstract}}</div>
