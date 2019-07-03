@@ -180,10 +180,12 @@ query currentSessions {
 
 <script>
 import Layout from "@/layouts/Default";
+import SpeakerCard from "@/components/SpeakerCard"
 
 export default {
   components: {
-    Layout
+    Layout,
+    SpeakerCard
   },
   created() {
     this.addShow();
