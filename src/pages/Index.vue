@@ -56,7 +56,7 @@
               class="my-5 text-xs-center secondary--text underline-secondary"
             >Lunch & Snack Sponsors</h1>
             <v-layout align-center row fill-height wrap>
-              <v-flex xs6 pa-5 align-self-center v-for="silver in 2" :key="silver.index">
+              <v-flex xs4 pa-5 align-self-center v-for="silver in 2" :key="silver.index">
                 <v-img
                   :src="require('@/assets/images/generic-profile.png')"
                   :aspect-ratio="1.25"

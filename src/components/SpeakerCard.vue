@@ -9,6 +9,15 @@
       </v-btn>
     </v-card-title>
     <v-card-actions>
+      <v-btn flat icon color="primary" class="px-3">
+        <v-icon class="primary--text px-3">fab fa-linkedin</v-icon>
+      </v-btn>
+      <v-btn flat icon color="primary" class="px-3">
+        <v-icon class="primary--text px-3">fab fa-twitter</v-icon>
+      </v-btn>
+      <v-btn flat icon color="primary" class="px-3">
+        <v-icon class="primary--text px-3">fas fa-globe</v-icon>
+      </v-btn>
       <v-spacer></v-spacer>
       <v-btn icon @click="speakerList[indexOf(speaker)].show = !speakerList[indexOf(speaker)].show">
         <v-icon>{{ speakerList[indexOf(speaker)].show ? 'fa-chevron-up' : 'fa-chevron-down' }}</v-icon>
