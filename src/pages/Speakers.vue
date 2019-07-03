@@ -5,7 +5,7 @@
         <h1 class="grey--text">2019 Speakers</h1>
         <v-divider class="pb-5"/>
         <h1 class="text-xs-center primary--text keynote">Keynote Speakers</h1>
-        <!-- <v-container>
+        <v-container>
           <v-layout wrap>
             <v-flex
               xs12
@@ -14,36 +14,16 @@
               v-for="(speaker) in $page.keynotes.edges"
               :key="speaker.node.speaker"
             >
-              <v-card>
-                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5" contain></v-img>
-                <v-card-title primary-title>
-                  <h2>{{speaker.node.speaker}}</h2>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    icon
-                    flat
-                    :href="`./${speaker.node.year}/${removeSpaces(speaker.node.speaker)}`"
-                    color="accent"
-                  >
-                    <v-icon>fa-info-circle</v-icon>
-                  </v-btn>
-                </v-card-title>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    icon
-                    @click="speakerListDropdown[index].show = !speakerListDropdown[index].show"
-                  >
-                    <v-icon>{{ speakerListDropdown[index].show ? 'fa-chevron-up' : 'fa-chevron-down' }}</v-icon>
-                  </v-btn>
-                </v-card-actions>
-                <v-slide-y-transition>
-                  <v-card-text v-show="speakerListDropdown[index].show">{{speaker.node.bio}}</v-card-text>
-                </v-slide-y-transition>
-              </v-card>
+              <SpeakerCard
+                :speaker="speaker.node.speaker"
+                :speakerList="speakerListDropdown"
+                :bio="speaker.node.bio"
+                :year="speaker.node.year"
+                :urlSpeaker="speaker.node.speaker"
+              />
             </v-flex>
           </v-layout>
-        </v-container> -->
+        </v-container>
         <h1 class="text-xs-center secondary--text sessions">Session Speakers</h1>
 
         <v-container fluid>
@@ -56,35 +36,15 @@
               v-for="(speaker) in $page.speakersPrimary.edges"
               :key="speaker.node.speaker"
             >
-              <v-card>
-                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
-                <v-card-title primary-title>
-                  <h2>{{speaker.node.speaker}}</h2>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    icon
-                    flat
-                    :href="`./${speaker.node.year}/${removeSpaces(speaker.node.speaker)}`"
-                    color="accent"
-                  >
-                    <v-icon>fa-info-circle</v-icon>
-                  </v-btn>
-                </v-card-title>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    icon
-                    @click="speakerListDropdown[indexOf(speaker.node.speaker)].show = !speakerListDropdown[indexOf(speaker.node.speaker)].show"
-                  >
-                    <v-icon>{{ speakerListDropdown[indexOf(speaker.node.speaker)].show ? 'fa-chevron-up' : 'fa-chevron-down' }}</v-icon>
-                  </v-btn>
-                </v-card-actions>
-                <v-slide-y-transition>
-                  <v-card-text v-show="speakerListDropdown[indexOf(speaker.node.speaker)].show">{{speaker.node.bio}}</v-card-text>
-                </v-slide-y-transition>
-              </v-card>
+              <SpeakerCard
+                :speaker="speaker.node.speaker"
+                :speakerList="speakerListDropdown"
+                :bio="speaker.node.bio"
+                :year="speaker.node.year"
+                :urlSpeaker="speaker.node.speaker"
+              />
             </v-flex>
-            <!-- <v-flex
+            <v-flex
               xs12
               sm6
               lg4
@@ -92,37 +52,16 @@
               v-for="(speaker, index) in $page.speakersSecondary.edges"
               :key="index"
             >
-              <v-card>
-                <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
-                <v-card-title primary-title>
-                  <h2>{{speaker.node.speaker2}}</h2>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    icon
-                    flat
-                    :href="`./${speaker.node.year}/${removeSpaces(speaker.node.speaker)}`"
-                    color="accent"
-                  >
-                    <v-icon>fa-info-circle</v-icon>
-                  </v-btn>
-                </v-card-title>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    icon
-                    @click="speakerListDropdown[index].show = !speakerListDropdown[index].show"
-                  >
-                    <v-icon>{{ speakerListDropdown[index].show ? 'fa-chevron-up' : 'fa-chevron-down' }}</v-icon>
-                  </v-btn>
-                </v-card-actions>
-                <v-slide-y-transition>
-                  <v-card-text v-show="speakerListDropdown[index].show">{{speaker.node.bio2}}</v-card-text>
-                </v-slide-y-transition>
-              </v-card>
-            </v-flex> -->
+              <SpeakerCard
+                :speaker="speaker.node.speaker2"
+                :speakerList="speakerListDropdown"
+                :bio="speaker.node.bio"
+                :year="speaker.node.year"
+                :urlSpeaker="speaker.node.speaker"
+              />
+            </v-flex>
           </v-layout>
         </v-container>
-        <h3>{{speakerListDropdown}}</h3>
       </v-content>
     </Layout>
   </v-app>
@@ -180,7 +119,7 @@ query currentSessions {
 
 <script>
 import Layout from "@/layouts/Default";
-import SpeakerCard from "@/components/SpeakerCard"
+import SpeakerCard from "@/components/SpeakerCard";
 
 export default {
   components: {
@@ -192,32 +131,24 @@ export default {
   },
   methods: {
     addShow: function() {
-      var speakersPrimary = this.$page.speakersPrimary.edges.map(
-        people => ({
-          speaker: people.node.speaker,
-          show: false
-        })
-      )
+      var speakersPrimary = this.$page.speakersPrimary.edges.map(people => ({
+        speaker: people.node.speaker,
+        show: false
+      }));
       var speakersSecondary = this.$page.speakersSecondary.edges.map(
         people => ({
           speaker: people.node.speaker2,
           show: false
         })
-      )
-      var keynotes = this.$page.keynotes.edges.map(
-        people => ({
-          speaker: people.node.speaker,
-          show: false
-        })
-      )
-      this.speakerListDropdown = keynotes.concat(speakersPrimary, speakersSecondary)
-    },
-    removeSpaces: function(text) {
-      return text.replace(/ /, "");
-    },
-    indexOf: function(speakerName){
-      var indexPos = this.speakerListDropdown.map(function(instance) { return instance.speaker; }).indexOf(speakerName)
-      return indexPos
+      );
+      var keynotes = this.$page.keynotes.edges.map(people => ({
+        speaker: people.node.speaker,
+        show: false
+      }));
+      this.speakerListDropdown = keynotes.concat(
+        speakersPrimary,
+        speakersSecondary
+      );
     }
   },
   data: () => ({
