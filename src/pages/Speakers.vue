@@ -122,6 +122,7 @@
             </v-flex> -->
           </v-layout>
         </v-container>
+        <h3>{{speakerListDropdown}}</h3>
       </v-content>
     </Layout>
   </v-app>
@@ -189,12 +190,25 @@ export default {
   },
   methods: {
     addShow: function() {
-      this.speakerListDropdown = this.$page.speakersPrimary.edges.map(
+      var speakersPrimary = this.$page.speakersPrimary.edges.map(
         people => ({
           speaker: people.node.speaker,
           show: false
         })
-      );
+      )
+      var speakersSecondary = this.$page.speakersSecondary.edges.map(
+        people => ({
+          speaker: people.node.speaker2,
+          show: false
+        })
+      )
+      var keynotes = this.$page.keynotes.edges.map(
+        people => ({
+          speaker: people.node.speaker,
+          show: false
+        })
+      )
+      this.speakerListDropdown = keynotes.concat(speakersPrimary, speakersSecondary)
     },
     removeSpaces: function(text) {
       return text.replace(/ /, "");
