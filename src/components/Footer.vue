@@ -37,6 +37,7 @@ export default {
     return {
       social: [
         { icon: "fab fa-twitter", url: "https://twitter.com/QAortheHighway" },
+        { icon: "fab fa-slideshare", url: "https://www.slideshare.net/qaoth" },
         {
           icon: "fab fa-linkedin",
           url:
