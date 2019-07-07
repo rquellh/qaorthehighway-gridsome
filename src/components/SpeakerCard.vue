@@ -4,9 +4,11 @@
     <v-card-title primary-title>
       <h2>{{speaker}}</h2>
       <v-spacer></v-spacer>
-      <v-btn icon flat :href="`./${year}/${removeSpaces(urlSpeaker)}`" color="accent">
-        <v-icon>fa-info-circle</v-icon>
-      </v-btn>
+      <div v-if="urlSpeaker">
+        <v-btn icon flat :href="`./${year}/${removeSpaces(urlSpeaker)}`" color="accent">
+          <v-icon>fa-info-circle</v-icon>
+        </v-btn>
+      </div>
     </v-card-title>
     <v-card-actions>
       <v-btn flat icon color="primary" class="px-3">
