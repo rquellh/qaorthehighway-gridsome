@@ -6,10 +6,10 @@
         <v-divider class="pb-2"/>
         <div class="mb-5">
           <v-btn @click="showList = true" small outline color="primary" class="right">
-            <v-icon class="pr-2 caption">fas fa-list</v-icon>List
+            <v-icon class="pr-2 button-font">fas fa-list</v-icon>List
           </v-btn>
           <v-btn @click="showList = false" small outline color="primary" class="right">
-            <v-icon class="pr-2 caption">fas fa-th</v-icon>Grid
+            <v-icon class="pr-2 button-font">fas fa-th</v-icon>Grid
           </v-btn>
         </div>
         <div v-if="showList">
@@ -202,4 +202,7 @@ export default {
 </script>
 
 <style scoped>
+.button-font {
+  font-size: 1rem
+}
 </style>
