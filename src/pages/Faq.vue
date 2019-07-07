@@ -79,6 +79,9 @@ export default {
         }
       ]
     };
+  },
+  metaInfo: {
+    title: "FAQ"
   }
 };
 </script>

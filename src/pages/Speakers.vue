@@ -153,7 +153,10 @@ export default {
   },
   data: () => ({
     speakerListDropdown: []
-  })
+  }),
+  metaInfo: {
+    title: "Speakers"
+  }
 };
 </script>
 

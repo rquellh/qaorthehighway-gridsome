@@ -85,6 +85,9 @@ export default {
         show: false
       }));
     }
+  },
+  metaInfo: {
+    title: "Committee"
   }
 };
 </script>

@@ -115,9 +115,6 @@ export default {
         }
       ]
     };
-  },
-  metaInfo: {
-    title: ""
   }
 };
 </script>
