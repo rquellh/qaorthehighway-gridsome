@@ -3,11 +3,11 @@
     <v-card class="flex" flat tile>
       <v-card-title class="dark-background">
         <v-container ma-0 pa-0 fluid>
-          <v-layout row ma-0 pa-0 class="text-xs-center">
+          <v-layout row align-center justify-space-around fill-height class="text-xs-center">
             <v-flex xs4>
               <p>Website by Ineffable Solutions & Ryan Quellhorst</p>
             </v-flex>
-            <v-flex class="xs4">
+            <v-flex xs4>
               <p>&copy; {{ new Date().getFullYear() }} QA or the Highway</p>
             </v-flex>
             <v-flex xs4>

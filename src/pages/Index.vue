@@ -14,7 +14,7 @@
                 v-for="mission in missions"
                 :key="mission.index"
               >
-                <v-img :src="mission.img" :aspect-ratio="10/3" contain></v-img>
+                <v-img :src="mission.img" :aspect-ratio="9/3" contain></v-img>
                 <h1 class="pt-5">{{mission.title}}</h1>
                 <p class="px-5 pb-3">{{mission.description}}</p>
               </v-flex>
