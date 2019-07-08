@@ -5,14 +5,14 @@
         <h1 class="grey--text">2019 Speakers</h1>
         <v-divider class="pb-5"/>
         <h1 class="text-xs-center primary--text keynote">Keynote Speakers</h1>
-        <v-container>
+        <v-container fluid>
           <v-layout wrap>
             <v-flex
               xs12
-              md6
-              pa-5
+              sm6
               v-for="(speaker) in $page.keynotes.edges"
               :key="speaker.node.speaker"
+              :class="['py-2', {'pa-2' : $vuetify.breakpoint.smAndUp}, {'pa-5' : $vuetify.breakpoint.lgAndUp}]"
             >
               <SpeakerCard
                 :speaker="speaker.node.speaker"
@@ -32,9 +32,9 @@
               xs12
               sm6
               lg4
-              pa-4
               v-for="(speaker) in $page.speakersPrimary.edges"
               :key="speaker.node.speaker"
+              :class="['py-2', {'pa-2' : $vuetify.breakpoint.smAndUp}, {'pa-4' : $vuetify.breakpoint.lgAndUp}]"
             >
               <SpeakerCard
                 :speaker="speaker.node.speaker"
@@ -48,9 +48,9 @@
               xs12
               sm6
               lg4
-              pa-4
               v-for="(speaker, index) in $page.speakersSecondary.edges"
               :key="index"
+              :class="['py-2', {'pa-2' : $vuetify.breakpoint.smAndUp}, {'pa-4' : $vuetify.breakpoint.lgAndUp}]"
             >
               <SpeakerCard
                 :speaker="speaker.node.speaker2"

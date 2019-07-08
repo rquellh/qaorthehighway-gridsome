@@ -14,7 +14,7 @@
         <h1 class="text-xs-center primary--text committee">Committee Members</h1>
         <v-container fluid ma-0 pa-0>
           <v-layout wrap ma-0 pa-0>
-            <v-flex xs12 md6 lg4 pa-5 v-for="(member, index) in members" :key="index">
+            <v-flex xs12 md6 lg4 pa-4 v-for="(member, index) in members" :key="index">
               <SpeakerCard :speaker="member.name" :speakerList="memberListDropdown" :bio="member.bio" />
             </v-flex>
           </v-layout>
