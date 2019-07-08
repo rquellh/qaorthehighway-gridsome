@@ -5,8 +5,8 @@
         <v-flex sm12 md8 ma-4>
           <v-img
             class="center"
-            max-width="900"
-            min-width="450"
+            max-width="950"
+            min-width="280"
             :src="require('@/assets/images/qaorthehighwaylogo.png')"
           >
             <div class="fill-height"/>
