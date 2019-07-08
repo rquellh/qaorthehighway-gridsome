@@ -5,10 +5,10 @@
         <h1 class="grey--text">2019 Program</h1>
         <v-divider class="pb-2"/>
         <div class="mb-5">
-          <v-btn @click="showList = true" small outline color="primary" class="right">
+          <v-btn @click="showList = true" :outline="!showList" small color="primary" class="right">
             <v-icon class="pr-2 button-font">fas fa-list</v-icon>List
           </v-btn>
-          <v-btn @click="showList = false" small outline color="primary" class="right">
+          <v-btn @click="showList = false" :outline="showList" small color="primary" class="right">
             <v-icon class="pr-2 button-font">fas fa-th</v-icon>Grid
           </v-btn>
         </div>
