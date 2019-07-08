@@ -6,7 +6,7 @@
         <ImageBreak/>
         <div class="mission">
           <v-container py-5 fluid>
-            <v-layout row wrap align-center>
+            <v-layout row wrap align-center :class="[{'pa-0 ma-0' : $vuetify.breakpoint.mdAndDown}]">
               <v-flex
                 xs12
                 md4
@@ -15,7 +15,7 @@
                 :key="mission.index"
               >
                 <v-img :src="mission.img" :aspect-ratio="9/3" contain></v-img>
-                <h1 class="pt-5">{{mission.title}}</h1>
+                <h1 class="pt-5" >{{mission.title}}</h1>
                 <p class="px-5 pb-3">{{mission.description}}</p>
               </v-flex>
             </v-layout>

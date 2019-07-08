@@ -14,8 +14,19 @@
         <h1 class="text-xs-center primary--text committee">Committee Members</h1>
         <v-container fluid ma-0 pa-0>
           <v-layout wrap ma-0 pa-0>
-            <v-flex xs12 md6 lg4 pa-4 v-for="(member, index) in members" :key="index">
-              <SpeakerCard :speaker="member.name" :speakerList="memberListDropdown" :bio="member.bio" />
+            <v-flex
+              xs12
+              sm6
+              lg4
+              v-for="(member, index) in members"
+              :key="index"
+              :class="['py-2', {'pa-2' : $vuetify.breakpoint.smAndUp}, {'pa-4' : $vuetify.breakpoint.lgAndUp}]"
+            >
+              <SpeakerCard
+                :speaker="member.name"
+                :speakerList="memberListDropdown"
+                :bio="member.bio"
+              />
             </v-flex>
           </v-layout>
         </v-container>

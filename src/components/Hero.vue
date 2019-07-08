@@ -11,9 +11,9 @@
           >
             <div class="fill-height"/>
           </v-img>
-          <h2 class="text-xs-center white--text display-2 font-weight-bold pt-5">February 19, 2019</h2>
-          <div class="text-xs-center pt-5 outline">
-            <v-btn outline dark class="pa-4 headline font-weight-bold" href="/outline">
+          <div :class="['text-xs-center white--text font-weight-bold', {'display-2 pt-5' : $vuetify.breakpoint.mdAndUp}, {'headline pt-3' : $vuetify.breakpoint.xsOnly}, {'display-1 pt-4' : $vuetify.breakpoint.smOnly}]">February 19, 2019</div>
+          <div :class="['text-xs-center outline', {'pt-2' : $vuetify.breakpoint.xsOnly}, {'pt-5' : $vuetify.breakpoint.smAndUp}]">
+            <v-btn outline dark :class="['pa-4 font-weight-bold', {'title' : $vuetify.breakpoint.xsOnly}, {'headline' : $vuetify.breakpoint.smAndUp}]" href="/outline">
               <v-icon class="pr-4">fa-ticket-alt</v-icon>Get Tickets
             </v-btn>
           </div>
