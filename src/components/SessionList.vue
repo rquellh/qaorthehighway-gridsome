@@ -11,8 +11,8 @@
           <v-container ma-0 pa-1 fluid>
             <v-layout row ma-0 align-center wrap>
               <v-flex xs12 md8>{{session.node.title}}</v-flex>
-              <v-flex xs6 md2 class="grey--text text--darken-1">{{session.node.speaker}}</v-flex>
-              <v-flex xs6 md2 text-xs-right pr-3>
+              <v-flex xs12 md2 :class="['grey--text text--darken-1', {'pt-2' : $vuetify.breakpoint.smAndDown}]">{{session.node.speaker}}</v-flex>
+              <v-flex xs12 md2 :class="['text-md-right', {'pt-2' : $vuetify.breakpoint.smAndDown}]"  pr-3 >
                 <v-chip :class="roomFiltered([index])">{{session.node.room}}</v-chip>
               </v-flex>
             </v-layout>
