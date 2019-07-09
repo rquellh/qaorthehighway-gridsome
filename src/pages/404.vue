@@ -4,10 +4,23 @@
       <Layout class="gradient">
         <v-content>
           <div class="center text-xs-center white--text">
-            <div class="display-4">Well this is embarassing...</div>
-            <div class="display-1 pt-5">A testing conference website that has a bug? Or maybe you were trying to break the site.</div>
-            <div class="display-1 pt-5">Either way we can make our site better if you let us know about it.</div>
-            <v-btn outline dark :class="['mt-3 pa-4', {'title' : $vuetify.breakpoint.xsOnly}, {'headline' : $vuetify.breakpoint.smAndUp}]" href="https://github.com/rquellh/qaorthehighway-gridsome/issues/new?assignees=&labels=&template=bug_report.md&title=" target="_blank">
+            <div
+              :class="[{'headline' : $vuetify.breakpoint.smAndDown}, {'display-2' : $vuetify.breakpoint.mdOnly},{'display-4' : $vuetify.breakpoint.lgAndUp} ]"
+            >Well this is embarassing...</div>
+            <div
+              :class="[{'subheading' : $vuetify.breakpoint.smAndDown}, {'headline' : $vuetify.breakpoint.mdOnly},{'display-1' : $vuetify.breakpoint.lgAndUp} ]"
+            >
+              <div class="pt-3">A testing conference website that has a bug? Or maybe you were trying to break the site.</div>
+              <div class="pt-3">Either way we can make our site better if you let us know about it.</div>
+            </div>
+
+            <v-btn
+              outline
+              dark
+              :class="['mt-3 pa-4', {'title' : $vuetify.breakpoint.xsOnly}, {'headline' : $vuetify.breakpoint.smAndUp}]"
+              href="https://github.com/rquellh/qaorthehighway-gridsome/issues/new?assignees=&labels=&template=bug_report.md&title="
+              target="_blank"
+            >
               <v-icon class="pr-4">fas fa-bug</v-icon>Report issue
             </v-btn>
           </div>
@@ -27,7 +40,11 @@
   max-width: 100%;
   display: block;
   position: relative;
-  background: linear-gradient(330deg, var(--v-primary-base),var(--v-secondary-base));
+  background: linear-gradient(
+    330deg,
+    var(--v-primary-base),
+    var(--v-secondary-base)
+  );
   background-size: 150% 150%;
 
   -webkit-animation: gradient-animator 10s ease infinite;
