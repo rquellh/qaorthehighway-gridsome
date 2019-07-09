@@ -14,7 +14,7 @@
                 >
                   <div
                     :class="[{'pt-3' : $vuetify.breakpoint.mdAndDown},{'pt-5' : $vuetify.breakpoint.lgAndUp} ]"
-                  >A testing conference website that has a bug? Or maybe you were trying to break the site.</div>
+                  >A testing conference website that has a bug? Or maybe you were expoloratory testing.</div>
                   <div
                     :class="[{'pt-3' : $vuetify.breakpoint.mdAndDown},{'pt-5' : $vuetify.breakpoint.lgAndUp} ]"
                   >Either way we can make our site better if you let us know about it.</div>
