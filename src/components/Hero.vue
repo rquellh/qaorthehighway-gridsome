@@ -37,8 +37,8 @@
 .gradient {
   display: block;
   position: relative;
-  background: linear-gradient(330deg, #004e92, #000428);
-  background-size: 250% 250%;
+  background: linear-gradient(330deg, #626aaf, #000428);
+  background-size: 150% 150%;
 
   -webkit-animation: gradient-animator 10s ease infinite;
   -moz-animation: gradient-animator 10s ease infinite;
