@@ -1,5 +1,5 @@
 <template>
-  <v-footer app absolute dark>
+  <v-footer app absolute dark fixed height="auto">
     <v-card class="flex" flat tile>
       <v-card-title class="dark-background">
         <v-container ma-0 pa-0 fluid>

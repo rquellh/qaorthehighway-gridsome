@@ -35,7 +35,13 @@
 </template>
 
 <script>
+export default {
+  metaInfo: {
+    title: "404"
+  }
+};
 </script>
+
 
 <style scoped>
 .gradient {
