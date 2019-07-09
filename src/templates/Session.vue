@@ -4,15 +4,14 @@
       <v-content class="my-5">
         <v-container ma-0 pa-0 fluid>
           <v-layout ma-0 pa-0 row wrap>
-            <v-flex xs12 md4 pa-3>
+            <v-flex xs12 sm4 pa-3 align-self-center>
               <v-img
                 :src="require('@/assets/images/generic-profile.png')"
-                aspect-ratio="1"
-                max-width="450"
-                center
+                :aspect-ratio="1"
+                contain
               ></v-img>
             </v-flex>
-            <v-flex xs12 md8 pa-3>
+            <v-flex xs12 sm8 pa-3>
               <div>
                 <h2 class="primary--text underline-primary">
                   {{ $page.session.speaker }}
