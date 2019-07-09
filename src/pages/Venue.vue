@@ -25,7 +25,27 @@
               <v-img :src="require('@/assets/images/facilities.webp')"/>
             </v-flex>
             <v-flex xs7>
-              <h3>During the conference, breakfast, lunch, and snacks will be provided. However, if you want other options, there are several dining locations within the Ohio Union including the Union Market, a fast-casual option offering grab-and-go food choices, and Espress-OH, a coffee shop serving specialty drinks, breakfast items, and gelato.</h3>
+                <div class="display-1 font-weight-bold">
+                    Food Options
+                </div>
+                <br>
+                <div class="headline">
+                    <div>
+                        During the conference, breakfast, lunch, and snacks will be provided. 
+                    </div>
+                    <br>
+                    <div>
+                        However, if you want other options, there are several dining locations within the Ohio Union.
+                        <ul>
+                            <li>
+                                <span class="font-weight-bold">Union Market </span><span class="font-italic">a fast-casual option offering grab-and-go food choices.</span>
+                            </li>
+                            <li>
+                                <span class="font-weight-bold">Espress-OH </span><span class="font-italic">a coffee shop serving specialty drinks, breakfast items, and gelato.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </v-flex>
           </v-layout>
           <v-layout row align-center fill-height>
@@ -39,6 +59,14 @@
                 <v-img :src="require('@/assets/images/google-maps.png')"/>
               </a>
             </v-flex>
+          </v-layout>
+          <v-layout>
+              <v-flex>
+
+              </v-flex>
+              <v-flex>
+
+              </v-flex>
           </v-layout>
         </v-container>
       </v-content>
