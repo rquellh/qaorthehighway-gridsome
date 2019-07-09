@@ -37,13 +37,13 @@
                       <span class="font-weight-bold">Union Market</span>
                       <span
                         class="font-italic"
-                      >a fast-casual option offering grab-and-go food choices.</span>
+                      > a fast-casual option offering grab-and-go food choices.</span>
                     </li>
                     <li>
                       <span class="font-weight-bold">Espress-OH</span>
                       <span
                         class="font-italic"
-                      >a coffee shop serving specialty drinks, breakfast items, and gelato.</span>
+                      > a coffee shop serving specialty drinks, breakfast items, and gelato.</span>
                     </li>
                   </ul>
                 </div>
