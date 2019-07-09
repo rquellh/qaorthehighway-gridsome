@@ -10,14 +10,14 @@
             <div
               :class="[{'subheading' : $vuetify.breakpoint.smAndDown}, {'headline' : $vuetify.breakpoint.mdOnly},{'display-1' : $vuetify.breakpoint.lgAndUp} ]"
             >
-              <div class="pt-3">A testing conference website that has a bug? Or maybe you were trying to break the site.</div>
-              <div class="pt-3">Either way we can make our site better if you let us know about it.</div>
+              <div :class="[{'pt-3' : $vuetify.breakpoint.mdAndDown},{'pt-5' : $vuetify.breakpoint.lgAndUp} ]">A testing conference website that has a bug? Or maybe you were trying to break the site.</div>
+              <div :class="[{'pt-3' : $vuetify.breakpoint.mdAndDown},{'pt-5' : $vuetify.breakpoint.lgAndUp} ]">Either way we can make our site better if you let us know about it.</div>
             </div>
 
             <v-btn
               outline
               dark
-              :class="['mt-3 pa-4', {'title' : $vuetify.breakpoint.xsOnly}, {'headline' : $vuetify.breakpoint.smAndUp}]"
+              :class="['mt-3 pa-4', {'subheading' : $vuetify.breakpoint.xsOnly}, {'headline' : $vuetify.breakpoint.smAndUp}]"
               href="https://github.com/rquellh/qaorthehighway-gridsome/issues/new?assignees=&labels=&template=bug_report.md&title="
               target="_blank"
             >
