@@ -27,7 +27,7 @@
         </div>
       </v-flex>
       <v-flex md4 class="hidden-sm-and-down">
-        <v-img :aspect-ratio="9/14" :src="require('@/assets/images/hero_image3.png')">
+        <v-img :aspect-ratio="9/14" :src="require('@/assets/images/hero_image.png')">
           <div class="fill-height"/>
         </v-img>
       </v-flex>
