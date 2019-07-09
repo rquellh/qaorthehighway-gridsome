@@ -11,7 +11,7 @@
 
     <v-navigation-drawer dark right disable-resize-watcher app v-model="drawer">
       <v-list two-line>
-        <v-list-tile v-for="link in links" :key="link.title" :href="link.path">
+        <v-list-tile v-for="link in links" :key="link.title" :href="link.path" ripple>
           <v-list-tile-action>
             <v-icon>{{link.icon}}</v-icon>
           </v-list-tile-action>
