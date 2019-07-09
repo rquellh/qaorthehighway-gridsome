@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="gradient2" ma-0 pa-0>
+  <v-container fluid class="gradient" ma-0 pa-0>
     <div class="geometric-background">
       <v-layout class="max-width" row pa-0 align-center fill-height>
         <v-flex sm12 md8 ma-4>
@@ -34,7 +34,7 @@
   background-size: cover;
 }
 
-.gradient2 {
+.gradient {
   display: block;
   position: relative;
   background: linear-gradient(330deg, #004e92, #000428);
