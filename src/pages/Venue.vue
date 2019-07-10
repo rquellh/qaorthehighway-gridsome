@@ -4,7 +4,7 @@
       <v-content>
         <v-container fluid>
           <v-layout row align-center fill-height pa-4>
-            <v-flex xs7>
+            <v-flex xs7 pa-3>
               <div class="display-1 font-weight-bold secondary--text">The Ohio Union</div>
               <br />
               <div class="headline">
@@ -14,8 +14,10 @@
                     target="_blank"
                   >1739 N High St, Columbus, OH 43210</a>
                 </div>
-                <br />
+                <br>
                 <div>The Ohio Union is a 318,000 square foot facility built on a foundation of rich history and Buckeye spirit. Located on The Ohio State University’s campus, the building has 34 unique meeting and event spaces and is near many on-campus and off-campus dining and entertainment options.</div>
+                <br>
+                <v-btn outline color="primary" class="font-weight-bold" target="_blank" href="https://ohiounion.osu.edu/posts/documents/ohio-union-building-maps.pdf">Floor Plan</v-btn>
               </div>
             </v-flex>
             <v-flex xs5>
@@ -26,7 +28,7 @@
             <v-flex xs5>
               <v-img :src="require('@/assets/images/facilities.webp')" />
             </v-flex>
-            <v-flex xs7 class="white--text">
+            <v-flex xs7 pa-3 class="white--text">
               <div class="display-1 font-weight-bold">Food Options</div>
               <br />
               <div class="headline">
@@ -57,7 +59,7 @@
             </v-flex>
           </v-layout>-->
           <v-layout row align-center fill-height pa-4>
-            <v-flex xs7>
+            <v-flex pa-3 xs7>
               <div class="display-1 font-weight-bold primary--text">Parking</div>
               <br />
               <div class="headline">
@@ -103,7 +105,7 @@
             <v-flex xs5>
               <v-img :src="require('@/assets/images/conference_crowd.webp')" />
             </v-flex>
-            <v-flex xs7 class="white--text">
+            <v-flex xs7 pa-3 class="white--text">
               <div class="display-1 font-weight-bold">Nearby Hotels</div>
               <br />
               <div class="headline">
@@ -133,6 +135,11 @@
 
 <script>
 export default {
+  metaInfo() {
+    return {
+      title: "Venue"
+    };
+  },
   data() {
     return {
       hotels: [
@@ -173,7 +180,7 @@ export default {
         }
       ]
     };
-  }
+  },
 };
 </script>
 
