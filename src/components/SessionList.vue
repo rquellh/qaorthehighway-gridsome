@@ -1,6 +1,6 @@
 <template>
   <div class="pb-3">
-    <h1 class="pl-4">{{sessions.edges[0].node.time}}</h1>
+    <div class="pl-4 time-font font-weight-bold">{{sessions.edges[0].node.time}}</div>
     <v-expansion-panel popout>
       <v-expansion-panel-content
         v-for="(session, index) in sessions.edges"
@@ -164,6 +164,9 @@ export default {
   right: 5%;
   bottom: 1rem;
   position: absolute;
+}
+.time-font {
+  font-size: 2rem
 }
 </style>
 
