@@ -2,7 +2,7 @@
   <v-card>
     <v-img :src="require('@/assets/images/generic-profile.png')" aspect-ratio="1.5"></v-img>
     <v-card-title primary-title>
-      <h2>{{speaker}}</h2>
+      <div class="headline font-weight-bold">{{speaker}}</div>
       <v-spacer></v-spacer>
       <div v-if="urlSpeaker">
         <v-btn icon flat :href="`./${year}/${removeSpaces(urlSpeaker)}`" color="accent">
@@ -26,7 +26,7 @@
       </v-btn>
     </v-card-actions>
     <v-slide-y-transition>
-      <v-card-text v-show="speakerList[indexOf(speaker)].show">{{bio}}</v-card-text>
+      <v-card-text class="subheading" v-show="speakerList[indexOf(speaker)].show">{{bio}}</v-card-text>
     </v-slide-y-transition>
   </v-card>
 </template>
