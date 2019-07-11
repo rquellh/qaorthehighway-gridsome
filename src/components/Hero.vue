@@ -21,7 +21,7 @@
             :class="['pa-4 font-weight-bold', {'title' : $vuetify.breakpoint.xsOnly}, {'headline' : $vuetify.breakpoint.smAndUp}]"
             href="/outline"
           >
-            <v-icon class="pr-3">fa-ticket-alt</v-icon>Tickets
+            <v-icon class="pr-3">fa-ticket-alt</v-icon>Get Tickets
           </v-btn>
         </div>
       </v-flex>
