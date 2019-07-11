@@ -47,7 +47,7 @@ export default {
         .toLowerCase();
     },
     removeSpaces: function(text) {
-      return text.replace(/ /, "")
+      return text.replace(/\s/g, "")
     }
   }
 };
