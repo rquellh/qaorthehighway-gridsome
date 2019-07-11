@@ -13,7 +13,7 @@
             </v-flex>
             <v-flex xs12 sm8 pa-3>
               <div>
-                <h2 class="primary--text underline-primary">
+                <div class="primary--text headline underline-primary">
                   {{ $page.session.speaker }}
                   <span class="pl-5">
                     <v-btn flat icon color="primary" class="px-3">
@@ -26,24 +26,24 @@
                       <v-icon class="primary--text px-3">fas fa-globe</v-icon>
                     </v-btn>
                   </span>
-                </h2>
+                </div>
               </div>
               <br>
-              <p>{{ $page.session.bio }}</p>
+              <div class="subheading">{{ $page.session.bio }}</div>
             </v-flex>
           </v-layout>
           <v-layout ma-0 pa-0 row wrap justify-space-between fill-height>
             <v-flex xs12 md8 pa-3>
-              <h2 class="underline-secondary secondary--text">{{$page.session.title}}</h2>
+              <div class="underline-secondary headline secondary--text">{{$page.session.title}}</div>
               <br>
-              <p>{{$page.session.abstract}}</p>
+              <div class="subheading">{{$page.session.abstract}}</div>
             </v-flex>
             <v-flex xs12 md4 pa-3>
-              <h2 class="underline-primary primary--text">Session Information</h2>
+              <div class="underline-primary headline primary--text">Session Information</div>
               <br>
-              <h3 class="font-weight-light">Time: {{$page.session.time}}</h3>
+              <div class="subheading">Time: {{$page.session.time}}</div>
               <br>
-              <h3 class="font-weight-light">Room: {{$page.session.room}}</h3>
+              <div class="subheading">Room: {{$page.session.room}}</div>
             </v-flex>
           </v-layout>
         </v-container>
