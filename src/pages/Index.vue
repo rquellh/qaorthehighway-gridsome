@@ -5,18 +5,18 @@
         <Hero/>
         <ImageBreak/>
         <div class="mission">
-          <v-container py-5 fluid>
+          <v-container py-5 fluid :class="[{'pa-0 ma-0' : $vuetify.breakpoint.mdAndDown}]">
             <v-layout row wrap align-center :class="[{'pa-0 ma-0' : $vuetify.breakpoint.mdAndDown}]">
               <v-flex
-                xs12
+                xs6
                 md4
                 class="text-xs-center"
                 v-for="mission in missions"
                 :key="mission.index"
               >
                 <v-img :src="mission.img" :aspect-ratio="9/3" contain></v-img>
-                <h1 class="pt-5" >{{mission.title}}</h1>
-                <p class="px-5 pb-3">{{mission.description}}</p>
+                <div :class="['py-3', 'font-weight-bold',{'display-2 pt-5' : $vuetify.breakpoint.mdAndUp}, {'headline pt-3' : $vuetify.breakpoint.xsOnly}, {'display-1 pt-4' : $vuetify.breakpoint.smOnly}]" >{{mission.title}}</div>
+                <div class="px-5 pb-3 subheading">{{mission.description}}</div>
               </v-flex>
             </v-layout>
 
