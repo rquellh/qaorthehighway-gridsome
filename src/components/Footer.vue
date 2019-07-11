@@ -3,18 +3,18 @@
     <v-card class="flex" flat tile>
       <v-card-title class="dark-background">
         <v-container ma-0 pa-0 fluid>
-          <v-layout row align-center fill-height class="text-xs-center">
-            <v-flex xs4 :class="[{'heading' : $vuetify.breakpoint.xsAndUp}]">
+          <v-layout row align-center fill-height class="text-xs-center" ma-0 pa-0>
+            <v-flex xs4 md4 :class="[{'caption' : $vuetify.breakpoint.smAndDown}]">
               <div>
                 Website by 
                 <a href="https://www.ineffable-solutions.com/" target="_blank" class="white--text">Ineffable Solutions</a> & 
                 <a href="https://www.linkedin.com/in/ryanquellhorst/" target="_blank" class="white--text">Ryan Quellhorst</a>
               </div>
             </v-flex>
-            <v-flex xs4>
+            <v-flex md4 class="hidden-sm-and-down">
               <div>&copy; {{ new Date().getFullYear() }} QA or the Highway</div>
             </v-flex>
-            <v-flex xs4>
+            <v-flex xs8 md4>
               <v-btn
                 v-for="(site, index) in social"
                 :key="index"
