@@ -3,35 +3,41 @@
     <Layout>
       <v-content>
         <v-container fluid>
-          <v-layout row align-center fill-height pa-4>
-            <v-flex xs7 pa-3>
+          <v-layout row wrap align-center fill-height pa-4>
+            <v-flex xs12 md7 pa-3>
               <div class="display-1 font-weight-bold secondary--text">The Ohio Union</div>
               <br />
-              <div class="headline">
+              <div class="subheading">
                 <div>
                   <a
                     href="https://www.google.com/maps/place/Ohio+Union/@39.9976772,-83.0085754,15z/data=!4m5!3m4!1s0x0:0x29e24cc55fefd423!8m2!3d39.9976772!4d-83.0085754"
                     target="_blank"
                   >1739 N High St, Columbus, OH 43210</a>
                 </div>
-                <br>
+                <br />
                 <div>The Ohio Union is a 318,000 square foot facility built on a foundation of rich history and Buckeye spirit. Located on The Ohio State University’s campus, the building has 34 unique meeting and event spaces and is near many on-campus and off-campus dining and entertainment options.</div>
-                <br>
-                <v-btn outline color="primary" class="font-weight-bold" target="_blank" href="https://ohiounion.osu.edu/posts/documents/ohio-union-building-maps.pdf">Floor Plan</v-btn>
+                <br />
+                <v-btn
+                  outline
+                  color="primary"
+                  class="font-weight-bold"
+                  target="_blank"
+                  href="https://ohiounion.osu.edu/posts/documents/ohio-union-building-maps.pdf"
+                >Floor Plan</v-btn>
               </div>
             </v-flex>
-            <v-flex xs5>
+            <v-flex xs12 md5>
               <v-img :src="require('@/assets/images/ohio-union-interior.jpg')" />
             </v-flex>
           </v-layout>
-          <v-layout row align-center fill-height pa-4 class="primary-background">
-            <v-flex xs5>
+          <v-layout row align-center wrap fill-height pa-4 class="primary-background">
+            <v-flex xs12 md5>
               <v-img :src="require('@/assets/images/facilities.webp')" />
             </v-flex>
-            <v-flex xs7 pa-3 class="white--text">
+            <v-flex xs12 md7 pa-3 class="white--text">
               <div class="display-1 font-weight-bold">Food Options</div>
               <br />
-              <div class="headline">
+              <div class="subheading">
                 <div>During the conference, breakfast, lunch, and snacks will be provided.</div>
                 <br />
                 <div>
@@ -46,30 +52,18 @@
               </div>
             </v-flex>
           </v-layout>
-          <!-- <v-layout row align-center fill-height>
-            <v-flex xs5>
-              <v-img :src="require('@/assets/images/ohio-union-exterior.jpg')"/>
-            </v-flex>
-            <v-flex xs7 ml-3>
-              <a
-                href="https://www.google.com/maps/place/Ohio+Union/@39.9976772,-83.0085754,15z/data=!4m5!3m4!1s0x0:0x29e24cc55fefd423!8m2!3d39.9976772!4d-83.0085754"
-              >
-                <v-img :src="require('@/assets/images/google-maps.png')"/>
-              </a>
-            </v-flex>
-          </v-layout>-->
-          <v-layout row align-center fill-height pa-4>
-            <v-flex pa-3 xs7>
+          <v-layout row align-center wrap fill-height pa-4>
+            <v-flex pa-3 xs12 md7>
               <div class="display-1 font-weight-bold primary--text">Parking</div>
               <br />
-              <div class="headline">
+              <div class="subheading">
                 <div>Parking is free for attendees as long as you follow the following steps.</div>
                 <br />
                 <ol class="font-weight-bold">
                   <li class="pb-2">
                     Navigate to Ohio Union SOUTH Garage
                     <ul>
-                      <li class="title">
+                      <li class="font-weight-regular">
                         <a
                           href="https://www.google.com/maps/place/Ohio+Union+South+Garage/@39.9978658,-83.0078208,18z/data=!4m5!3m4!1s0x0:0x451ce9b70ee6591a!8m2!3d39.9983601!4d-83.0088199"
                           target="_blank"
@@ -81,9 +75,7 @@
                   <li class="pb-2">
                     Bring that ticket with you to the conference registration desk
                     <ul>
-                      <li
-                        class="title"
-                      >Someone at the registration desk will give you a barcoded validation sticker</li>
+                      <li class="font-weight-regular">Someone at the registration desk will give you a barcoded validation sticker</li>
                     </ul>
                   </li>
                   <li
@@ -92,7 +84,7 @@
                 </ol>
               </div>
             </v-flex>
-            <v-flex xs5>
+            <v-flex xs12 md5>
               <a
                 href="https://www.google.com/maps/place/Ohio+Union+South+Garage/@39.9978658,-83.0078208,18z/data=!4m5!3m4!1s0x0:0x451ce9b70ee6591a!8m2!3d39.9983601!4d-83.0088199"
                 target="_blank"
@@ -101,14 +93,14 @@
               </a>
             </v-flex>
           </v-layout>
-          <v-layout row align-center fill-height pa-4 class="primary-background">
-            <v-flex xs5>
+          <v-layout row align-center wrap fill-height pa-4 class="primary-background">
+            <v-flex xs12 md5>
               <v-img :src="require('@/assets/images/conference_crowd.webp')" />
             </v-flex>
-            <v-flex xs7 pa-3 class="white--text">
+            <v-flex xs12 md7 pa-3 class="white--text">
               <div class="display-1 font-weight-bold">Nearby Hotels</div>
               <br />
-              <div class="headline">
+              <div class="subheading">
                 <ul v-for="hotel in hotels" :key="hotel.name">
                   <li>
                     <a :href="hotel.url">
@@ -180,7 +172,7 @@ export default {
         }
       ]
     };
-  },
+  }
 };
 </script>
 
